@@ -10,7 +10,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { AppRoutingModule } from './/app-routing.module';
 import { HomeComponent } from './page/home/home.component';
 import { SharedComponent } from './components/shared/shared.component';
-
+import { FacebookModule } from 'ngx-facebook';
 import { ComponentProfileComponent } from './components/component-profile/component-profile.component';
 
 @NgModule({
@@ -30,7 +30,8 @@ import { ComponentProfileComponent } from './components/component-profile/compon
     MatCheckboxModule,
     MatGridListModule,
     MatIconModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FacebookModule.forRoot()
   ],
   exports: [
     MatButtonModule, MatCheckboxModule, MatGridListModule
