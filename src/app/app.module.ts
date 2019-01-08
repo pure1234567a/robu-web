@@ -7,12 +7,9 @@ import { ComponentFramesProfileComponent } from './components/component-frames-p
 import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCheckboxModule,MatGridListModule } from '@angular/material';
 import { MatIconModule } from '@angular/material/icon';
-import { HomeComponent } from './page/home/home.component';
-<<<<<<< HEAD
-import { SharedComponent } from './componemt/shared/shared.component';
-=======
 import { AppRoutingModule } from './/app-routing.module';
->>>>>>> aeffaed0860ee7c3deaebd06350dbfeab63c7e15
+import { HomeComponent } from './page/home/home.component';
+import { SharedComponent } from './components/shared/shared.component';
 
 @NgModule({
   declarations: [
