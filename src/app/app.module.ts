@@ -8,13 +8,15 @@ import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform
 import { MatButtonModule, MatCheckboxModule,MatGridListModule } from '@angular/material';
 import { MatIconModule } from '@angular/material/icon';
 import { HomeComponent } from './page/home/home.component';
+import { SharedComponent } from './componemt/shared/shared.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     ComponentFramesProfileComponent,
-    HomeComponent
+    HomeComponent,
+    SharedComponent
   ],
   imports: [
     BrowserModule,
