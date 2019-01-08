@@ -14,8 +14,8 @@ import { FacebookModule } from 'ngx-facebook';
 import { ComponentProfileComponent } from './components/component-profile/component-profile.component';
 import { HttpClientModule } from '@angular/common/http';
 
-import { SocialLoginModule, AuthServiceConfig, LoginOpt } from "angularx-social-login";
-import {FacebookLoginProvider } from "angularx-social-login";
+import { SocialLoginModule, AuthServiceConfig, LoginOpt, FacebookLoginProvider } from "angularx-social-login";
+
 
 
 // const fbLoginOptions: LoginOpt = {
@@ -30,7 +30,7 @@ let config = new AuthServiceConfig([
     provider: new FacebookLoginProvider("2134431583284588")
   }
 ]);
- 
+
 export function provideConfig() {
   return config;
 }
@@ -57,9 +57,9 @@ export function provideConfig() {
     HttpClientModule
   ],
   exports: [
-    MatButtonModule, 
+    MatButtonModule,
     MatCheckboxModule,
-     MatGridListModule
+    MatGridListModule
   ],
   providers: [
     {
