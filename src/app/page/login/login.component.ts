@@ -30,6 +30,7 @@ export class LoginComponent implements OnInit {
       this.loggedIn = (user != null);
     });
   }
+  
 
   openHome() {
     this.route.navigate(['home'])
