@@ -10,7 +10,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { AppRoutingModule } from './/app-routing.module';
 import { HomeComponent } from './page/home/home.component';
 import { SharedComponent } from './components/shared/shared.component';
-import { ProfileComponent } from './components/profile/profile.component';
+
+import { ComponentProfileComponent } from './components/component-profile/component-profile.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { ProfileComponent } from './components/profile/profile.component';
     ComponentFramesProfileComponent,
     HomeComponent,
     SharedComponent,
-    ProfileComponent
+    ComponentProfileComponent
   ],
   imports: [
     BrowserModule,
