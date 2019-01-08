@@ -34,8 +34,9 @@ export class LoginComponent implements OnInit {
   openHome() {
     this.signInWithFB();
     this.authService.authState.subscribe((user) => {
-      console.log('user : ',user.photoUrl)
       this.user = user;
+      this.user.photoUrl = "https://graph.facebook.com/"+this.user.id+"/picture?width=2000&height=2000"
+      console.log('user : ',user)
       window.localStorage.setItem('@user',JSON.stringify(this.user));
       this.loggedIn = (user != null);
     });
