@@ -12,6 +12,7 @@ import { HomeComponent } from './page/home/home.component';
 import { SharedComponent } from './components/shared/shared.component';
 
 import { ComponentProfileComponent } from './components/component-profile/component-profile.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ComponentProfileComponent } from './components/component-profile/compon
     MatCheckboxModule,
     MatGridListModule,
     MatIconModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   exports: [
     MatButtonModule, MatCheckboxModule, MatGridListModule

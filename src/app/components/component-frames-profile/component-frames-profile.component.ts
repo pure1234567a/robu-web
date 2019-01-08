@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 export interface Tile {
   color: string;
@@ -17,19 +18,30 @@ export interface Frame {
 })
 export class ComponentFramesProfileComponent implements OnInit {
 
-  constructor() { }
+  frame: any;
+
+  constructor(
+    private http: HttpClient,
+  ) { }
 
   ngOnInit() {
+    this.getFrame()
+  }
+
+  async getFrame() {
+    const res: any = await this.http.get('../../../assets/json/json-frame.json').toPromise();
+    this.frame = res
+    console.log(this.frame);
   }
 
   image: Frame[] = [
-    {id:"1",image:"./assets/img/frame-0.png"},
-    {id:"2",image:"./assets/img/frame-1.png"},
-    {id:"3",image:"./assets/img/frame-2.png"},
-    {id:"4",image:"./assets/img/frame-3.png"},
-    {id:"5",image:"./assets/img/frame-1.png"},
-    {id:"6",image:"./assets/img/frame-2.png"},
-    {id:"7",image:"./assets/img/frame-3.png"},
+    { id: "1", image: "./assets/img/frame-0.png" },
+    { id: "2", image: "./assets/img/frame-1.png" },
+    { id: "3", image: "./assets/img/frame-2.png" },
+    { id: "4", image: "./assets/img/frame-3.png" },
+    { id: "5", image: "./assets/img/frame-1.png" },
+    { id: "6", image: "./assets/img/frame-2.png" },
+    { id: "7", image: "./assets/img/frame-3.png" },
 
   ]
 

@@ -1,0 +1,15 @@
+{
+    "data": [{
+            "_id": "1",
+            "image": {"url":"./assets/img/frame-0.png"}
+        },{
+            "_id": "2",
+            "image": {"url":"./assets/img/frame-1.png"}
+        },{
+            "_id": "3",
+            "image": {"url":"./assets/img/frame-2.png"}
+        },{
+            "_id": "4",
+            "image": {"url":"./assets/img/frame-3.png"}
+        }]
+}
