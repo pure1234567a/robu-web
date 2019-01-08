@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  frameImg: any;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  getFrame(e) {
+    this.frameImg = e;
+    // console.log(this.frameImg);
   }
 
 }
