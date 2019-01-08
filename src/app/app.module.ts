@@ -19,7 +19,7 @@ import {FacebookLoginProvider } from "angularx-social-login";
 
 
 const fbLoginOptions: LoginOpt = {
-  scope: 'pages_messaging,pages_messaging_subscriptions,email,pages_show_list,manage_pages,user_photos=large',
+  scope: 'pages_messaging,pages_messaging_subscriptions,email,pages_show_list,manage_pages,user_photos.width(300).height(300)',
   return_scopes: true,
   enable_profile_selector: true
 }; 

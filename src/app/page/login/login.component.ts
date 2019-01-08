@@ -18,14 +18,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private authService: AuthService,
-    private fb: FacebookService,
     private route: Router,
   ) { 
-    const initParams: InitParams = {
-      appId: '2134431583284588',
-      version: 'v3.2'
-    };
-    fb.init(initParams);
   }
 
   signInWithFB(): void {
@@ -36,17 +30,11 @@ export class LoginComponent implements OnInit {
 
   }
 
-  login() {
-    this.fb.login()
-      .then((response: LoginResponse) => console.log(' P  mop : ',response))
-      .catch((error: any) => console.error(error));
-  }
 
   openHome() {
-    this.login()
     this.signInWithFB();
     this.authService.authState.subscribe((user) => {
-      // console.log('user : ',user)
+      console.log('user : ',user)
       this.user = user;
       // window.localStorage('d',this.user)
       this.loggedIn = (user != null);
