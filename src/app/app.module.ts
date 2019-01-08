@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './page/login/login.component';
 import { ComponentFramesProfileComponent } from './components/component-frames-profile/component-frames-profile.component';
+import { MatIconModule } from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
@@ -12,7 +14,8 @@ import { ComponentFramesProfileComponent } from './components/component-frames-p
     ComponentFramesProfileComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
