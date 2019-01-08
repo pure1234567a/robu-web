@@ -8,6 +8,7 @@ import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform
 import { MatButtonModule, MatCheckboxModule,MatGridListModule } from '@angular/material';
 import { MatIconModule } from '@angular/material/icon';
 import { HomeComponent } from './page/home/home.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HomeComponent } from './page/home/home.component';
     MatButtonModule, 
     MatCheckboxModule,
     MatGridListModule,
-    MatIconModule
+    MatIconModule,
+    AppRoutingModule
   ],
   exports: [
     MatButtonModule, MatCheckboxModule,MatGridListModule
