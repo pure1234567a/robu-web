@@ -13,6 +13,19 @@ import { SharedComponent } from './components/shared/shared.component';
 
 import { ComponentProfileComponent } from './components/component-profile/component-profile.component';
 
+import { SocialLoginModule, AuthServiceConfig } from "angularx-social-login";
+import {FacebookLoginProvider } from "angularx-social-login";
+
+let config = new AuthServiceConfig([
+  {
+    id: FacebookLoginProvider.PROVIDER_ID,
+    provider: new FacebookLoginProvider("2134431583284588")
+  }
+]);
+ 
+export function provideConfig() {
+  return config;
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,12 +43,20 @@ import { ComponentProfileComponent } from './components/component-profile/compon
     MatCheckboxModule,
     MatGridListModule,
     MatIconModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SocialLoginModule
   ],
   exports: [
-    MatButtonModule, MatCheckboxModule, MatGridListModule
+    MatButtonModule, 
+    MatCheckboxModule,
+     MatGridListModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: AuthServiceConfig,
+      useFactory: provideConfig
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
