@@ -14,23 +14,26 @@ export class LoginComponent implements OnInit {
   private user: SocialUser;
   private loggedIn: boolean;
 
-  // signInWithFB(): void {
-  //   this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
-  // }
+  
 
   constructor(
     private authService: AuthService,
     private route: Router,
   ) { }
 
+  signInWithFB(): void {
+    this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
+  }
+
   ngOnInit() {
 
   }
 
   openHome() {
+    this.signInWithFB();
     this.authService.authState.subscribe((user) => {
+      console.log('user : ',user)
       this.user = user;
-      console.log(this.user)
       this.loggedIn = (user != null);
     });
     console.log("object")
