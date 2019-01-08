@@ -1,5 +1,6 @@
 .center {
-    display: inline-block; // height: calc(96vh - 145px);
+    display: inline-block;
+     /* height: calc(96vh - 145px); */
     text-align: center;
     width: 100vw;
     vertical-align: middle;
