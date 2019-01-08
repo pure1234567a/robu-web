@@ -29,7 +29,6 @@ export class LoginComponent implements OnInit {
       console.log(this.user)
       this.loggedIn = (user != null);
     });
-  
   }
 
   openHome() {
