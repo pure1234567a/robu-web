@@ -8,7 +8,11 @@ import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform
 import { MatButtonModule, MatCheckboxModule,MatGridListModule } from '@angular/material';
 import { MatIconModule } from '@angular/material/icon';
 import { HomeComponent } from './page/home/home.component';
+<<<<<<< HEAD
 import { SharedComponent } from './componemt/shared/shared.component';
+=======
+import { AppRoutingModule } from './/app-routing.module';
+>>>>>>> aeffaed0860ee7c3deaebd06350dbfeab63c7e15
 
 @NgModule({
   declarations: [
@@ -25,7 +29,8 @@ import { SharedComponent } from './componemt/shared/shared.component';
     MatButtonModule, 
     MatCheckboxModule,
     MatGridListModule,
-    MatIconModule
+    MatIconModule,
+    AppRoutingModule
   ],
   exports: [
     MatButtonModule, MatCheckboxModule,MatGridListModule
