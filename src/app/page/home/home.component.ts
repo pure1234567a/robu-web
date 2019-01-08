@@ -8,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   frameImg: any;
+  user:any;
 
   constructor() { }
 
   ngOnInit() {
+   this.user = JSON.parse(window.localStorage.getItem('@user'))
+   console.log('home :',this.user);
   }
 
   getFrame(e) {

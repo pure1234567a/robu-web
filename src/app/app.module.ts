@@ -14,6 +14,26 @@ import { FacebookModule } from 'ngx-facebook';
 import { ComponentProfileComponent } from './components/component-profile/component-profile.component';
 import { HttpClientModule } from '@angular/common/http';
 
+import { SocialLoginModule, AuthServiceConfig, LoginOpt } from "angularx-social-login";
+import {FacebookLoginProvider } from "angularx-social-login";
+
+
+// const fbLoginOptions: LoginOpt = {
+//   scope: 'pages_messaging,pages_messaging_subscriptions,email,pages_show_list,manage_pages',
+//   return_scopes: true,
+//   enable_profile_selector: true
+// }; 
+
+let config = new AuthServiceConfig([
+  {
+    id: FacebookLoginProvider.PROVIDER_ID,
+    provider: new FacebookLoginProvider("2134431583284588")
+  }
+]);
+ 
+export function provideConfig() {
+  return config;
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,13 +52,21 @@ import { HttpClientModule } from '@angular/common/http';
     MatGridListModule,
     MatIconModule,
     AppRoutingModule,
+    SocialLoginModule,
     FacebookModule.forRoot(),
     HttpClientModule
   ],
   exports: [
-    MatButtonModule, MatCheckboxModule, MatGridListModule
+    MatButtonModule, 
+    MatCheckboxModule,
+     MatGridListModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: AuthServiceConfig,
+      useFactory: provideConfig
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
