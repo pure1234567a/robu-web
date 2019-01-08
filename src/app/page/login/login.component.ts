@@ -28,9 +28,10 @@ export class LoginComponent implements OnInit {
       this.user = user;
       console.log(this.user)
       this.loggedIn = (user != null);
+      
     });
   }
-  
+
 
   openHome() {
     this.route.navigate(['home'])
