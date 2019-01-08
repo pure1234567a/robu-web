@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-component-profile',
@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ComponentProfileComponent implements OnInit {
 
-  constructor() { }
+  @Input() getFrameImg: any = [];
+
+  constructor() {
+
+  }
 
   ngOnInit() {
+  }
+
+  clickTest() {
+    console.log(this.getFrameImg);
+
   }
 
 }
