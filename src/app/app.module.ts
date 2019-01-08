@@ -7,12 +7,15 @@ import { ComponentFramesProfileComponent } from './components/component-frames-p
 import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCheckboxModule,MatGridListModule } from '@angular/material';
 import { MatIconModule } from '@angular/material/icon';
+import { HomeComponent } from './page/home/home.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    ComponentFramesProfileComponent
+    ComponentFramesProfileComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +24,8 @@ import { MatIconModule } from '@angular/material/icon';
     MatButtonModule, 
     MatCheckboxModule,
     MatGridListModule,
-    MatIconModule
+    MatIconModule,
+    AppRoutingModule
   ],
   exports: [
     MatButtonModule, MatCheckboxModule,MatGridListModule
