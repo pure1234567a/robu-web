@@ -1,0 +1,6 @@
+.center {
+    display: inline-block; 
+    text-align: center;
+    width: 100vw;
+    vertical-align: middle;
+}
