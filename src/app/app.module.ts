@@ -7,9 +7,11 @@ import { ComponentFramesProfileComponent } from './components/component-frames-p
 import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCheckboxModule, MatGridListModule } from '@angular/material';
 import { MatIconModule } from '@angular/material/icon';
-import { HomeComponent } from './page/home/home.component';
 import { AppRoutingModule } from './/app-routing.module';
-import { ProfileComponent } from './components/profile/profile.component';
+import { HomeComponent } from './page/home/home.component';
+import { SharedComponent } from './components/shared/shared.component';
+
+import { ComponentProfileComponent } from './components/component-profile/component-profile.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,8 @@ import { ProfileComponent } from './components/profile/profile.component';
     LoginComponent,
     ComponentFramesProfileComponent,
     HomeComponent,
-    ProfileComponent
+    SharedComponent,
+    ComponentProfileComponent
   ],
   imports: [
     BrowserModule,
