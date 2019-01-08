@@ -5,30 +5,32 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './page/login/login.component';
 import { ComponentFramesProfileComponent } from './components/component-frames-profile/component-frames-profile.component';
 import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatCheckboxModule,MatGridListModule } from '@angular/material';
+import { MatButtonModule, MatCheckboxModule, MatGridListModule } from '@angular/material';
 import { MatIconModule } from '@angular/material/icon';
 import { HomeComponent } from './page/home/home.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     ComponentFramesProfileComponent,
-    HomeComponent
+    HomeComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     NoopAnimationsModule,
-    MatButtonModule, 
+    MatButtonModule,
     MatCheckboxModule,
     MatGridListModule,
     MatIconModule,
     AppRoutingModule
   ],
   exports: [
-    MatButtonModule, MatCheckboxModule,MatGridListModule
+    MatButtonModule, MatCheckboxModule, MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
