@@ -13,13 +13,20 @@ import { SharedComponent } from './components/shared/shared.component';
 
 import { ComponentProfileComponent } from './components/component-profile/component-profile.component';
 
-import { SocialLoginModule, AuthServiceConfig } from "angularx-social-login";
+import { SocialLoginModule, AuthServiceConfig, LoginOpt } from "angularx-social-login";
 import {FacebookLoginProvider } from "angularx-social-login";
+
+
+const fbLoginOptions: LoginOpt = {
+  scope: 'pages_messaging,pages_messaging_subscriptions,email,pages_show_list,manage_pages,user_photos=large',
+  return_scopes: true,
+  enable_profile_selector: true
+}; 
 
 let config = new AuthServiceConfig([
   {
     id: FacebookLoginProvider.PROVIDER_ID,
-    provider: new FacebookLoginProvider("2134431583284588")
+    provider: new FacebookLoginProvider("2134431583284588", fbLoginOptions)
   }
 ]);
  
