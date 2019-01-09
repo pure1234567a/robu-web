@@ -45,34 +45,34 @@ export class SharedComponent implements OnInit {
           // 'og:url': 'https://angular-for-seo.firebaseapp.com',
           'og:title': 'RabuRabuLoveLove',
           'og:description': 'ข้อความยาว ๆ',
-          'og:image': 'https://futurism.com/wp-content/uploads/2017/09/download-600x315.png'
+          'og:image': this.user.photoUrl
         }
       })
     };
     this.fb.ui(params)
       .then((res: UIResponse) => console.log(res))
       .catch((e: any) => console.error(e));
-    const reader: any = new FileReader();
-    reader.onload = () => {
-      const base64 = reader.result.replace(/\n/g, '');
-      this.pushUpload(base64);
-    };
+    // const reader: any = new FileReader();
+    // reader.onload = () => {
+    //   const base64 = reader.result.replace(/\n/g, '');
+    //   this.pushUpload(base64);
+    // };
 
     // this.pushUpload();
   }
-  pushUpload(base64) {
-    this.imageArray = [];
-    const storageRef = firebase.storage().ref();
-    const fileRandom = Math.floor((Date.now() / 1000) + new Date().getUTCMilliseconds());
-    const uploadTask: any = storageRef.child(`images/uploads/${fileRandom}.jpg`);
-    uploadTask.putString(base64, firebase.storage.StringFormat.DATA_URL).then((snapshot) => {
-      uploadTask.getDownloadURL().then(url => {
-        console.log(url);
-        // this.images.push({
-        //   url: url
-        // });
-      });
-    });
-  }
+  // pushUpload(base64) {
+  //   this.imageArray = [];
+  //   const storageRef = firebase.storage().ref();
+  //   const fileRandom = Math.floor((Date.now() / 1000) + new Date().getUTCMilliseconds());
+  //   const uploadTask: any = storageRef.child(`images/uploads/${fileRandom}.jpg`);
+  //   uploadTask.putString(base64, firebase.storage.StringFormat.DATA_URL).then((snapshot) => {
+  //     uploadTask.getDownloadURL().then(url => {
+  //       console.log(url);
+  //       // this.images.push({
+  //       //   url: url
+  //       // });
+  //     });
+  //   });
+  // }
 
 }
