@@ -13,7 +13,7 @@ export class SharedComponent implements OnInit {
   imageArray: any = [];
   // currentUpload: ClassUpload;
   uploadProgress: number;
-
+  user: any;
 
   constructor(private fb: FacebookService) {
     const initParams: InitParams = {
@@ -26,6 +26,8 @@ export class SharedComponent implements OnInit {
 
 
   ngOnInit() {
+    this.user = JSON.parse(window.localStorage.getItem('@user'));
+    console.log(this.user);
   }
   // onClickShare() {
   //   console.log('object');
