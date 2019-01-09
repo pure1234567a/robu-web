@@ -36,10 +36,9 @@ export class LoginComponent implements OnInit {
     this.authService.authState.subscribe((user) => {
       this.user = user;
       this.user.photoUrl = "https://graph.facebook.com/"+this.user.id+"/picture?width=2000&height=2000"
-      console.log('user : ',user)
       window.localStorage.setItem('@user',JSON.stringify(this.user));
       this.loggedIn = (user != null);
+      this.route.navigate(['home'])
     });
-    this.route.navigate(['home'])
   }
 }
