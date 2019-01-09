@@ -45,7 +45,7 @@ export class SharedComponent implements OnInit {
           // 'og:url': 'https://angular-for-seo.firebaseapp.com',
           'og:title': 'RabuRabuLoveLove',
           'og:description': 'ข้อความยาว ๆ',
-          'og:image': this.user.photoUrl
+          'og:image': 'https://futurism.com/wp-content/uploads/2017/09/download-600x315.png'
         }
       })
     };
