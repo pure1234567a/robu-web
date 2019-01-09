@@ -19,7 +19,7 @@ import { SocialLoginModule, AuthServiceConfig, LoginOpt, FacebookLoginProvider }
 
 
 const fbLoginOptions: LoginOpt = {
-  scope: 'email,user_location,user_gender,user_birthday',
+  scope: 'email,user_location,user_gender,age_range',
   return_scopes: true,
   enable_profile_selector: true
 };
