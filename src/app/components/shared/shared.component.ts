@@ -17,7 +17,7 @@ export class SharedComponent implements OnInit {
 
   constructor(private fb: FacebookService) {
     const initParams: InitParams = {
-      appId: '217854369152043',
+      appId: '2134431583284588',
       version: 'v3.2'
     };
 
