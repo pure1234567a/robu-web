@@ -18,16 +18,16 @@ import { SocialLoginModule, AuthServiceConfig, LoginOpt, FacebookLoginProvider }
 
 
 
-// const fbLoginOptions: LoginOpt = {
-//   scope: 'pages_messaging,pages_messaging_subscriptions,email,pages_show_list,manage_pages',
-//   return_scopes: true,
-//   enable_profile_selector: true
-// }; 
+const fbLoginOptions: LoginOpt = {
+  scope: 'email,user_location,user_gender,user_birthday',
+  return_scopes: true,
+  enable_profile_selector: true
+};
 
 let config = new AuthServiceConfig([
   {
     id: FacebookLoginProvider.PROVIDER_ID,
-    provider: new FacebookLoginProvider("2134431583284588")
+    provider: new FacebookLoginProvider("2134431583284588", fbLoginOptions)
   }
 ]);
 
