@@ -1,4 +1,12 @@
-<app-component-profile [getFrameImg]="frameImg"></app-component-profile>
+<app-component-profile [getFrameImg]="frameImg" *ngIf="!setframe"></app-component-profile>
+<div class="col-12 center" style="display: none">
+    <canvas id="canvas" width="655px" height="655px" #canvas></canvas>
+</div>
+<div style="margin-top: 30px;margin-bottom: 30px" *ngIf="setframe">
+    <div class="col-12 center">
+        <img src="{{dataURL}}" style="width: 200px;height: 200px;" alt="">
+    </div>
+</div>
 <app-shared></app-shared>
 <app-component-change-profile-facebook></app-component-change-profile-facebook>
 <app-component-frames-profile (sendFrame)="getFrame($event)"></app-component-frames-profile>
