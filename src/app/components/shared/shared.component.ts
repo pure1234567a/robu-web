@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, AfterViewChecked } from '@angular/core';
 import { FacebookService, InitParams, UIParams, UIResponse } from 'ngx-facebook';
 import * as firebase from 'firebase';
 // import { ClassUpload } from './class-upload';
@@ -15,6 +15,7 @@ export class SharedComponent implements OnInit {
   // currentUpload: ClassUpload;
   uploadProgress: number;
   user: any;
+  images: any = [];
 
   constructor(private fb: FacebookService) {
     const initParams: InitParams = {
@@ -29,7 +30,7 @@ export class SharedComponent implements OnInit {
   ngOnInit() {
     console.log(this.imageInput);
     this.user = JSON.parse(window.localStorage.getItem('@user'));
-    console.log(this.user);
+    // console.log(this.imageInput);
   }
   // onClickShare() {
   //   console.log('object');
@@ -47,7 +48,7 @@ export class SharedComponent implements OnInit {
           // 'og:url': 'https://angular-for-seo.firebaseapp.com',
           'og:title': 'RabuRabuLoveLove',
           'og:description': 'ข้อความยาว ๆ',
-          'og:image': this.user.photoUrl
+          'og:image': 'https://pbs.twimg.com/media/Cw9UFj7UoAAwsWY.jpg'
         }
       })
     };
@@ -60,21 +61,20 @@ export class SharedComponent implements OnInit {
     //   this.pushUpload(base64);
     // };
 
-    // this.pushUpload();
+    this.pushUpload(this.imageInput);
   }
-  // pushUpload(base64) {
-  //   this.imageArray = [];
-  //   const storageRef = firebase.storage().ref();
-  //   const fileRandom = Math.floor((Date.now() / 1000) + new Date().getUTCMilliseconds());
-  //   const uploadTask: any = storageRef.child(`images/uploads/${fileRandom}.jpg`);
-  //   uploadTask.putString(base64, firebase.storage.StringFormat.DATA_URL).then((snapshot) => {
-  //     uploadTask.getDownloadURL().then(url => {
-  //       console.log(url);
-  //       // this.images.push({
-  //       //   url: url
-  //       // });
-  //     });
-  //   });
-  // }
+  pushUpload(base64) {
+    const storageRef = firebase.storage().ref();
+    const fileRandom = Math.floor((Date.now() / 1000) + new Date().getUTCMilliseconds());
+    const uploadTask: any = storageRef.child(`images/uploads/${fileRandom}.jpg`);
+    uploadTask.putString(base64, firebase.storage.StringFormat.DATA_URL).then((snapshot) => {
+      uploadTask.getDownloadURL().then(url => {
+        console.log(url);
+        this.images.push({
+          url: url
+        });
+      });
+    });
+  }
 
 }

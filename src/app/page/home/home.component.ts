@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   @ViewChild('canvas') canvas: ElementRef
   dataURL: any;
   imageArray: any;
-  images: any = [];
+  images: any;
   constructor() { }
 
   ngOnInit() {
@@ -73,28 +73,8 @@ export class HomeComponent implements OnInit {
     var getCnvs = document.getElementById('canvas') as HTMLCanvasElement;
     this.dataURL = getCnvs.toDataURL();
     // console.log(this.dataURL);
-    const base64 = this.dataURL;
-    setTimeout(() => {
-      this.pushUpload(base64);
-
-    }, 100);
+    this.images = this.dataURL;
+    // console.log(this.images)
   }
-
-  pushUpload(base64) {
-
-    const storageRef = firebase.storage().ref();
-    const fileRandom = Math.floor((Date.now() / 1000) + new Date().getUTCMilliseconds());
-    const uploadTask: any = storageRef.child(`images/uploads/${fileRandom}.jpg`);
-    uploadTask.putString(base64, firebase.storage.StringFormat.DATA_URL).then((snapshot) => {
-      uploadTask.getDownloadURL().then(url => {
-        console.log(url);
-        this.images.push({
-          url: url
-        });
-      });
-    });
-  }
-
-
 
 }
