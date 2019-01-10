@@ -15,7 +15,7 @@ export class SharedComponent implements OnInit {
   // currentUpload: ClassUpload;
   uploadProgress: number;
   user: any;
-  images: any = [];
+  images: any;
 
   constructor(private fb: FacebookService) {
     const initParams: InitParams = {
@@ -49,7 +49,7 @@ export class SharedComponent implements OnInit {
           // 'og:url': 'https://angular-for-seo.firebaseapp.com',
           'og:title': 'RabuRabuLoveLove',
           'og:description': 'ข้อความยาว ๆ',
-          'og:image': 'https://pbs.twimg.com/media/Cw9UFj7UoAAwsWY.jpg'
+          'og:image': this.images
         }
       })
     };
@@ -71,9 +71,7 @@ export class SharedComponent implements OnInit {
     uploadTask.putString(base64, firebase.storage.StringFormat.DATA_URL).then((snapshot) => {
       uploadTask.getDownloadURL().then(url => {
         console.log(url);
-        this.images.push({
-          url: url
-        });
+        this.images = url;
       });
     });
   }
