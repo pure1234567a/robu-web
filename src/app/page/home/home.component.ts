@@ -18,9 +18,6 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
-
-
-
   ngOnInit() {
     this.user = JSON.parse(window.localStorage.getItem('@user'))
     console.log('home :', this.user);
@@ -31,7 +28,7 @@ export class HomeComponent implements OnInit {
     this.setframe = true;
     setTimeout(() => {
       this.clickToMerge(e);
-    }, 50);
+    }, 100);
   }
 
   clickToMerge(img) {
