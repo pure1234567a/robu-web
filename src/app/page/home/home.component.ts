@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import * as firebase from 'firebase';
 
 @Component({
   selector: 'app-home',
@@ -13,6 +14,7 @@ export class HomeComponent implements OnInit {
   // userImg: any;
   @ViewChild('canvas') canvas: ElementRef
   dataURL: any;
+  imageArray: any;
 
   constructor() { }
 
@@ -70,7 +72,23 @@ export class HomeComponent implements OnInit {
   getMerge() {
     var getCnvs = document.getElementById('canvas') as HTMLCanvasElement;
     this.dataURL = getCnvs.toDataURL();
-    console.log(this.dataURL);
+    // console.log(this.dataURL);
+    this.pushUpload(this.dataURL)
+  }
+
+  pushUpload(base64) {
+    this.imageArray = [];
+    const storageRef = firebase.storage().ref();
+    const fileRandom = Math.floor((Date.now() / 1000) + new Date().getUTCMilliseconds());
+    const uploadTask: any = storageRef.child(`images/uploads/${fileRandom}.jpg`);
+    uploadTask.putString(base64, firebase.storage.StringFormat.DATA_URL).then((snapshot) => {
+      uploadTask.getDownloadURL().then(url => {
+        console.log(url);
+        // this.images.push({
+        //   url: url
+        // });
+      });
+    });
   }
 
 
