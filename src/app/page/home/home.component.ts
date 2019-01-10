@@ -12,6 +12,9 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
+
+
+
   ngOnInit() {
    this.user = JSON.parse(window.localStorage.getItem('@user'))
    console.log('home :',this.user);
@@ -21,5 +24,7 @@ export class HomeComponent implements OnInit {
     this.frameImg = e;
     // console.log(this.frameImg);
   }
+
+  
 
 }

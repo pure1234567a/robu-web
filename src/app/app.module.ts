@@ -19,10 +19,10 @@ import { SocialLoginModule, AuthServiceConfig, LoginOpt, FacebookLoginProvider }
 
 
 const fbLoginOptions: LoginOpt = {
-  scope: 'pages_messaging,pages_messaging_subscriptions,email,pages_show_list,manage_pages,user_location,user_gender,user_friends,user_age_range,publish_to_groups,groups_access_member_info,user_events,user_link,user_likes,user_hometown,user_photos,user_videos,user_tagged_places,user_posts',
+  scope: 'email,birthday',
   return_scopes: true,
   enable_profile_selector: true,
-  auth_type: 'rerequest'
+  auth_type: 'request'
 };
 
 
