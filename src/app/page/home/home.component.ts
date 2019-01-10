@@ -85,9 +85,9 @@ export class HomeComponent implements OnInit {
     uploadTask.putString(base64, firebase.storage.StringFormat.DATA_URL).then((snapshot) => {
       uploadTask.getDownloadURL().then(url => {
         console.log(url);
-        this.images.push({
-          url: url
-        });
+        // this.images.push({
+        //   url: url
+        // });
       });
     });
   }
