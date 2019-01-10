@@ -21,7 +21,9 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.user = JSON.parse(window.localStorage.getItem('@user'))
     console.log('home :', this.user);
-    this.userImg = this.user.photoUrl
+    if (this.user && this.user.photoUrl) {
+      this.userImg = this.user.photoUrl
+    }
   }
 
   getFrame(e) {
