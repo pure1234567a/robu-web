@@ -39,25 +39,45 @@ export class SharedComponent implements OnInit {
 
   //   element.click();
   // }
-  async shareWithOpenGraphActions() {
+  shareWithOpenGraphActions() {
 
-    const image = await this.pushUpload(this.imageInput);
-    console.log(image);
-    const params: UIParams = {
-      method: 'share',
-      action_type: 'og.likes',
-      action_properties: JSON.stringify({
-        object: {
-          // 'og:url': 'https://angular-for-seo.firebaseapp.com',
-          'og:title': 'RabuRabuLoveLove',
-          'og:description': 'ข้อความยาว ๆ',
-          'og:image': image
-        }
-      })
-    };
-    this.fb.ui(params)
-      .then((res: UIResponse) => console.log(res))
-      .catch((e: any) => console.error(e));
+    this.pushUpload(this.imageInput).then(res => {
+      const params: UIParams = {
+        method: 'share',
+        action_type: 'og.likes',
+        action_properties: JSON.stringify({
+          object: {
+            // 'og:url': 'https://angular-for-seo.firebaseapp.com',
+            'og:title': 'RabuRabuLoveLove',
+            'og:description': 'ข้อความยาว ๆ',
+            'og:image': res
+          }
+        })
+      };
+      this.fb.ui(params)
+        .then((res: UIResponse) => console.log(res))
+        .catch((e: any) => console.error(e));
+    }).catch(err => {
+      console.log(err)
+    });
+
+    // const image = await this.pushUpload(this.imageInput);
+    // console.log(image);
+    // const params: UIParams = {
+    //   method: 'share',
+    //   action_type: 'og.likes',
+    //   action_properties: JSON.stringify({
+    //     object: {
+    //       // 'og:url': 'https://angular-for-seo.firebaseapp.com',
+    //       'og:title': 'RabuRabuLoveLove',
+    //       'og:description': 'ข้อความยาว ๆ',
+    //       'og:image': image
+    //     }
+    //   })
+    // };
+    // this.fb.ui(params)
+    //   .then((res: UIResponse) => console.log(res))
+    //   .catch((e: any) => console.error(e));
 
     // const reader: any = new FileReader();
     // reader.onload = () => {
