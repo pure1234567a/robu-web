@@ -9,8 +9,8 @@ export class ComponentProfileComponent implements OnInit {
 
   @Input() getFrameImg: any = [];
   user: any;
-  // userImg: "https://scontent.fbkk12-1.fna.fbcdn.net/v/t1.0-9/33037353_1774105469351187_6162166278820724736_n.jpg?_nc_cat=106&_nc_ht=scontent.fbkk12-1.fna&oh=2a5f4827d44e73fcc805042ec15d83d4&oe=5CC6C4D2"
-  userImg: "";
+  // userImg:any = "https://scontent.fbkk12-1.fna.fbcdn.net/v/t1.0-9/33037353_1774105469351187_6162166278820724736_n.jpg?_nc_cat=106&_nc_ht=scontent.fbkk12-1.fna&oh=2a5f4827d44e73fcc805042ec15d83d4&oe=5CC6C4D2"
+  userImg: any;
   @ViewChild('canvas') canvas: ElementRef
 
   constructor() {
