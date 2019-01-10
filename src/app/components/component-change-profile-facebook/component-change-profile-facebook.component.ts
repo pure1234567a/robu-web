@@ -10,8 +10,8 @@ export class ComponentChangeProfileFacebookComponent implements OnInit {
   user: any;
   constructor(private fb: FacebookService) {
     const initParams: InitParams = {
-      appId: '217854369152043',
-      version: 'v2.5'
+      appId: '2134431583284588',
+      version: 'v3.2'
     };
 
     fb.init(initParams);
@@ -33,12 +33,12 @@ export class ComponentChangeProfileFacebookComponent implements OnInit {
 
     // );
     this.fb.api('/' + this.user.id + '/photos', 'post', {
-      'url': 'https://www.khaosod.co.th/wp-content/uploads/2016/09/14333162_320123348342430_1546313821850115366_n.jpg',
-      'published': false
+      'url': 'https:\/\/www.khaosod.co.th\/wp-content\/uploads\/2016\/09\/14333162_320123348342430_1546313821850115366_n.jpg',
+      'published': true
     }).then(res => {
-      console.log(res);
+      console.log('res : ', res);
     }).catch(err => {
-      console.log(err);
+      console.log('err : ', err);
     });
   }
 

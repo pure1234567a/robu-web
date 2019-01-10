@@ -10,8 +10,8 @@ export class HomeComponent implements OnInit {
   setframe: Boolean = false;
   frameImg: any;
   user: any;
-  userImg: any = "https://scontent.fbkk12-1.fna.fbcdn.net/v/t1.0-9/33037353_1774105469351187_6162166278820724736_n.jpg?_nc_cat=106&_nc_ht=scontent.fbkk12-1.fna&oh=2a5f4827d44e73fcc805042ec15d83d4&oe=5CC6C4D2"
-  // userImg: any;
+  // userImg: any = "https://scontent.fbkk12-1.fna.fbcdn.net/v/t1.0-9/33037353_1774105469351187_6162166278820724736_n.jpg?_nc_cat=106&_nc_ht=scontent.fbkk12-1.fna&oh=2a5f4827d44e73fcc805042ec15d83d4&oe=5CC6C4D2"
+  userImg: any;
   @ViewChild('canvas') canvas: ElementRef
   dataURL: any;
   imageArray: any;
@@ -21,6 +21,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.user = JSON.parse(window.localStorage.getItem('@user'))
     console.log('home :', this.user);
+    this.userImg = this.user.photoUrl
   }
 
   getFrame(e) {
