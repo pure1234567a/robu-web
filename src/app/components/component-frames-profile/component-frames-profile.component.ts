@@ -53,6 +53,7 @@ export class ComponentFramesProfileComponent implements OnInit {
 
   select(img) {
     console.log(img)
+    this.spinner.show();
     this.check.id = img._id;
     if(this.check.id === img._id){
     this.sendFrame.emit(img);

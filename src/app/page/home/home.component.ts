@@ -69,6 +69,7 @@ export class HomeComponent implements OnInit {
     }
     setTimeout(() => {
       this.getMerge()
+      this.spinner.hide()
     }, 500);
   }
 
