@@ -40,7 +40,9 @@ export class SharedComponent implements OnInit {
   //   element.click();
   // }
   async shareWithOpenGraphActions() {
-    await this.pushUpload(this.imageInput);
+
+    const image = await this.pushUpload(this.imageInput);
+    console.log(image);
     const params: UIParams = {
       method: 'share',
       action_type: 'og.likes',
@@ -49,13 +51,14 @@ export class SharedComponent implements OnInit {
           // 'og:url': 'https://angular-for-seo.firebaseapp.com',
           'og:title': 'RabuRabuLoveLove',
           'og:description': 'ข้อความยาว ๆ',
-          'og:image': this.images
+          'og:image': image
         }
       })
     };
     this.fb.ui(params)
       .then((res: UIResponse) => console.log(res))
       .catch((e: any) => console.error(e));
+
     // const reader: any = new FileReader();
     // reader.onload = () => {
     //   const base64 = reader.result.replace(/\n/g, '');
@@ -65,13 +68,14 @@ export class SharedComponent implements OnInit {
 
   }
   pushUpload(base64) {
-    const storageRef = firebase.storage().ref();
-    const fileRandom = Math.floor((Date.now() / 1000) + new Date().getUTCMilliseconds());
-    const uploadTask: any = storageRef.child(`images/uploads/${fileRandom}.jpg`);
-    uploadTask.putString(base64, firebase.storage.StringFormat.DATA_URL).then((snapshot) => {
-      uploadTask.getDownloadURL().then(url => {
-        console.log(url);
-        this.images = url;
+    return new Promise((resove, reject) => {
+      const storageRef = firebase.storage().ref();
+      const fileRandom = Math.floor((Date.now() / 1000) + new Date().getUTCMilliseconds());
+      const uploadTask: any = storageRef.child(`images/uploads/${fileRandom}.jpg`);
+      uploadTask.putString(base64, firebase.storage.StringFormat.DATA_URL).then((snapshot) => {
+        uploadTask.getDownloadURL().then(url => {
+          resove(url);
+        });
       });
     });
   }
