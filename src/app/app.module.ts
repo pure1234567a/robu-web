@@ -23,7 +23,7 @@ const fbLoginOptions: LoginOpt = {
   scope: 'email',
   return_scopes: true,
   enable_profile_selector: true,
-  auth_type: 'request'
+  auth_type: 'rerequest'
 };
 
 
