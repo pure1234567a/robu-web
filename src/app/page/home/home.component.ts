@@ -64,14 +64,14 @@ export class HomeComponent implements OnInit {
       img.src = src;
       return img;
     }
-    // setTimeout(() => {
+    setTimeout(() => {
       this.getMerge()
-    // }, 300);
+    }, 500);
   }
 
- async getMerge() {
+  getMerge() {
     var getCnvs = document.getElementById('canvas') as HTMLCanvasElement;
-    this.dataURL = await getCnvs.toDataURL();
+    this.dataURL =  getCnvs.toDataURL();
     // console.log(this.dataURL);
     this.images = this.dataURL;
     // console.log(this.images)
