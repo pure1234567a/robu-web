@@ -51,8 +51,11 @@ export class ComponentFramesProfileComponent implements OnInit {
 
   select(img) {
     console.log(img)
-    this.check.id = img._id
+    this.check.id = img._id;
+    if(this.check.id === img._id){
     this.sendFrame.emit(img);
+
+    }
     // this.clickToMerge(img);
   }
 
