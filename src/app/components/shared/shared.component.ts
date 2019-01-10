@@ -79,13 +79,6 @@ export class SharedComponent implements OnInit {
     //   .then((res: UIResponse) => console.log(res))
     //   .catch((e: any) => console.error(e));
 
-    // const reader: any = new FileReader();
-    // reader.onload = () => {
-    //   const base64 = reader.result.replace(/\n/g, '');
-    //   this.pushUpload(base64);
-    // };
-
-
   }
   pushUpload(base64) {
     return new Promise((resove, reject) => {
