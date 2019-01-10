@@ -26,5 +26,8 @@
         },{
             "_id": "9",
             "image": {"url":"./assets/img/7246.png"}
+        },{
+            "_id": "10",
+            "image": {"url":"./assets/img/frame.png"}
         }]
 }
