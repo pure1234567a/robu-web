@@ -29,9 +29,9 @@ export class HomeComponent implements OnInit {
   getFrame(e) {
     this.frameImg = e;
     this.setframe = true;
-    setTimeout(() => {
+    // setTimeout(() => {
       this.clickToMerge(e);
-    }, 100);
+    // }, 100);
   }
 
   clickToMerge(img) {
@@ -64,9 +64,9 @@ export class HomeComponent implements OnInit {
       img.src = src;
       return img;
     }
-    setTimeout(() => {
+    // setTimeout(() => {
       this.getMerge()
-    }, 50);
+    // }, 50);
   }
 
   getMerge() {
