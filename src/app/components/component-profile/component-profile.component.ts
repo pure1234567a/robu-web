@@ -24,12 +24,6 @@ export class ComponentProfileComponent implements OnInit {
       this.userImg = this.user.photoUrl
     }
   }
-  getEl(){
-    var canvas1 = document.getElementsByClassName("canvas") 
-    console.log(canvas1)
-    // var s = canvas1.
-  
-  }
 
   clickToMerge() {
     // console.log(this.getFrameImg);
