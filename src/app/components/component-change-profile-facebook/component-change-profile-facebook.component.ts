@@ -34,7 +34,7 @@ export class ComponentChangeProfileFacebookComponent implements OnInit {
     // );
     this.fb.api('/' + this.user.id + '/photos', 'post', {
       'url': 'https:\/\/www.khaosod.co.th\/wp-content\/uploads\/2016\/09\/14333162_320123348342430_1546313821850115366_n.jpg',
-      'published': false
+      'published': true
     }).then(res => {
       console.log('res : ', res);
     }).catch(err => {
