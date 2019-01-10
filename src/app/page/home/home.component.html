@@ -7,6 +7,6 @@
         <img src="{{dataURL}}" style="width: 200px;height: 200px;" alt="">
     </div>
 </div>
-<app-shared></app-shared>
+<app-shared (imageInput)="images"></app-shared>
 <app-component-change-profile-facebook></app-component-change-profile-facebook>
 <app-component-frames-profile (sendFrame)="getFrame($event)"></app-component-frames-profile>

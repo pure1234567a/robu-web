@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter } from '@angular/core';
 import { FacebookService, InitParams, UIParams, UIResponse } from 'ngx-facebook';
 import * as firebase from 'firebase';
 // import { ClassUpload } from './class-upload';
@@ -9,6 +9,7 @@ import * as firebase from 'firebase';
   styleUrls: ['./shared.component.css']
 })
 export class SharedComponent implements OnInit {
+  @Input() imageInput: any;
   // private basePath: string = '/uploads';
   imageArray: any = [];
   // currentUpload: ClassUpload;
@@ -26,6 +27,7 @@ export class SharedComponent implements OnInit {
 
 
   ngOnInit() {
+    console.log(this.imageInput);
     this.user = JSON.parse(window.localStorage.getItem('@user'));
     console.log(this.user);
   }
