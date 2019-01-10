@@ -7,7 +7,7 @@ import { FacebookService, InitParams } from 'ngx-facebook';
   styleUrls: ['./component-change-profile-facebook.component.css']
 })
 export class ComponentChangeProfileFacebookComponent implements OnInit {
-
+  user: any;
   constructor(private fb: FacebookService) {
     const initParams: InitParams = {
       appId: '217854369152043',
@@ -18,6 +18,11 @@ export class ComponentChangeProfileFacebookComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.user = JSON.parse(window.localStorage.getItem('@user'));
+    if (this.user) {
+      console.log(this.user);
+    }
+
   }
 
   ChangeProfile() {
@@ -27,7 +32,7 @@ export class ComponentChangeProfileFacebookComponent implements OnInit {
     //   // }
 
     // );
-    this.fb.api('/1851405618282720/photos', 'post', {
+    this.fb.api('/' + this.user.id + '/photos', 'post', {
       'url': 'https://www.khaosod.co.th/wp-content/uploads/2016/09/14333162_320123348342430_1546313821850115366_n.jpg',
       'published': false
     }).then(res => {
