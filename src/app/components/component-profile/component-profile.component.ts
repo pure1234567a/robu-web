@@ -19,10 +19,10 @@ export class ComponentProfileComponent implements OnInit, AfterViewChecked {
 
   ngOnInit() {
     this.user = JSON.parse(window.localStorage.getItem('@user'))
-    if (this.user) {
-      console.log(this.user);
-      this.userImg = this.user.photoUrl
-    }
+    // if (this.user) {
+    //   console.log(this.user);
+    //   this.userImg = this.user.photoUrl
+    // }
   }
 
   ngAfterViewChecked() {
