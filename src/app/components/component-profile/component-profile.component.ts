@@ -9,7 +9,8 @@ export class ComponentProfileComponent implements OnInit, AfterViewChecked {
 
   @Input() getFrameImg: any = [];
   user: any;
-  userImg: "https://scontent.fbkk12-1.fna.fbcdn.net/v/t1.0-9/33037353_1774105469351187_6162166278820724736_n.jpg?_nc_cat=106&_nc_ht=scontent.fbkk12-1.fna&oh=2a5f4827d44e73fcc805042ec15d83d4&oe=5CC6C4D2"
+  // userImg: "https://scontent.fbkk12-1.fna.fbcdn.net/v/t1.0-9/33037353_1774105469351187_6162166278820724736_n.jpg?_nc_cat=106&_nc_ht=scontent.fbkk12-1.fna&oh=2a5f4827d44e73fcc805042ec15d83d4&oe=5CC6C4D2"
+  userImg: "";
   @ViewChild('canvas') canvas: ElementRef
 
   constructor() {
@@ -17,7 +18,11 @@ export class ComponentProfileComponent implements OnInit, AfterViewChecked {
   }
 
   ngOnInit() {
-
+    this.user = JSON.parse(window.localStorage.getItem('@user'))
+    if (this.user) {
+      console.log(this.user);
+      this.userImg = this.user.photoUrl
+    }
   }
 
   ngAfterViewChecked() {
@@ -29,7 +34,7 @@ export class ComponentProfileComponent implements OnInit, AfterViewChecked {
     var canvas: any = document.getElementById("canvas");
     var ctx = canvas.getContext("2d");
 
-    var img1 = loadImage('https://scontent.fbkk12-1.fna.fbcdn.net/v/t1.0-9/33037353_1774105469351187_6162166278820724736_n.jpg?_nc_cat=106&_nc_ht=scontent.fbkk12-1.fna&oh=2a5f4827d44e73fcc805042ec15d83d4&oe=5CC6C4D2', main);
+    var img1 = loadImage(this.userImg, main);
     var img2 = loadImage(this.getFrameImg.image.url, main);
 
     var imagesLoaded = 0;
