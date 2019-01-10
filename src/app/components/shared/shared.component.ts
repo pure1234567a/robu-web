@@ -39,7 +39,8 @@ export class SharedComponent implements OnInit {
 
   //   element.click();
   // }
-  shareWithOpenGraphActions() {
+  async shareWithOpenGraphActions() {
+    await this.pushUpload(this.imageInput);
     const params: UIParams = {
       method: 'share',
       action_type: 'og.likes',
@@ -61,7 +62,7 @@ export class SharedComponent implements OnInit {
     //   this.pushUpload(base64);
     // };
 
-    this.pushUpload(this.imageInput);
+
   }
   pushUpload(base64) {
     const storageRef = firebase.storage().ref();
