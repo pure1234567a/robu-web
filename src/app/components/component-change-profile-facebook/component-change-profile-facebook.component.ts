@@ -11,7 +11,7 @@ export class ComponentChangeProfileFacebookComponent implements OnInit {
   constructor(private fb: FacebookService) {
     const initParams: InitParams = {
       appId: '217854369152043',
-      version: 'v3.2'
+      version: 'v2.5'
     };
 
     fb.init(initParams);
