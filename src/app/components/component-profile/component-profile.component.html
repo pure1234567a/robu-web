@@ -1,11 +1,16 @@
 <div class="col-12 margin-top">
   <div class="row">
-
     <div class="col-12 center">
-      <canvas width="512" height="512" id="canvas" class="example"></canvas>
-      <!-- <img style="width: 200px; height: 200px; object-fit: cover" class="center" src="" id="canvas"> -->
+      <button (click)="clickToMerge()">ใส่กรอปกร๊อปกรอป</button>
+      <button (click)="getMerge()">เอาออกมาาาา</button>
+    </div>
+    <div class="col-12 center">
+      <img style="width: 200px; height: 200px; object-fit: cover" class="center" src="user.photoUrl" alt="">
+    </div>
+    <div class="col-12 center">
+      <canvas id="canvas" width="655%" height="655%" #canvas></canvas>
     </div>
   </div>
 
-  <button type="" (click)="merceImage()">test</button>
+  <!-- <button type="" (click)="merceImage()">test</button> -->
   <button type="" (click)="getEl()">get</button>
