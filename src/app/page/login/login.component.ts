@@ -30,7 +30,6 @@ export class LoginComponent implements OnInit {
 
   }
 
-
   openHome() {
     this.signInWithFB();
     this.authService.authState.subscribe((user) => {

@@ -10,12 +10,33 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+
 <link rel="stylesheet" href="styles.81d5cdd79ae60aa623cf.css"></head>
 
 <body>
   <app-root></app-root>
   <div id="fb-root"></div>
+  <script>
+    window.fbAsyncInit = function () {
+      FB.init({
+        appId: '217854369152043',
+        autoLogAppEvents: true,
+        xfbml: true,
+        version: 'v3.2'
+      });
+    };
+
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) { return; }
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
   <script type="text/javascript" src="https://connect.facebook.net/en_US/sdk.js"></script>
-<script type="text/javascript" src="runtime.a66f828dca56eeb90e02.js"></script><script type="text/javascript" src="polyfills.bfaf123d018125a5506d.js"></script><script type="text/javascript" src="main.30bbe37687864488cb25.js"></script></body>
+  
+<script type="text/javascript" src="runtime.a66f828dca56eeb90e02.js"></script><script type="text/javascript" src="polyfills.bfaf123d018125a5506d.js"></script><script type="text/javascript" src="main.d5ba88aeffeb6551ae7a.js"></script></body>
 
 </html>
