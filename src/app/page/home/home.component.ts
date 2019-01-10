@@ -66,7 +66,7 @@ export class HomeComponent implements OnInit {
     }
     setTimeout(() => {
       this.getMerge()
-    }, 500);
+    }, 5);
   }
 
   getMerge() {
