@@ -64,9 +64,9 @@ export class HomeComponent implements OnInit {
       img.src = src;
       return img;
     }
-    // setTimeout(() => {
+    setTimeout(() => {
       this.getMerge()
-    // }, 50);
+    }, 500);
   }
 
   getMerge() {
