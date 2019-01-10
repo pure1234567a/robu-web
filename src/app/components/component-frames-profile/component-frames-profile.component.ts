@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 // export interface Frame {
 //   id: string;
@@ -25,6 +26,7 @@ export class ComponentFramesProfileComponent implements OnInit {
 
   constructor(
     private http: HttpClient,
+    private spinner: NgxSpinnerService,
   ) { }
 
   ngOnInit() {

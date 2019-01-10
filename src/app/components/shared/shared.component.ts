@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, EventEmitter, AfterViewChecked } from '@angular/core';
 import { FacebookService, InitParams, UIParams, UIResponse } from 'ngx-facebook';
 import * as firebase from 'firebase';
+import { NgxSpinnerService } from 'ngx-spinner';
 // import { ClassUpload } from './class-upload';
 
 @Component({
@@ -17,7 +18,10 @@ export class SharedComponent implements OnInit {
   user: any;
   images: any;
 
-  constructor(private fb: FacebookService) {
+  constructor(
+    private fb: FacebookService,
+    private spinner: NgxSpinnerService
+    ) {
     const initParams: InitParams = {
       appId: '2134431583284588',
       version: 'v3.2'
@@ -40,7 +44,7 @@ export class SharedComponent implements OnInit {
   //   element.click();
   // }
   shareWithOpenGraphActions() {
-
+    
     this.pushUpload(this.imageInput).then(res => {
       const params: UIParams = {
         method: 'share',
@@ -81,6 +85,7 @@ export class SharedComponent implements OnInit {
 
   }
   pushUpload(base64) {
+    this.spinner.show()
     return new Promise((resove, reject) => {
       const storageRef = firebase.storage().ref();
       const fileRandom = Math.floor((Date.now() / 1000) + new Date().getUTCMilliseconds());
@@ -90,6 +95,7 @@ export class SharedComponent implements OnInit {
           resove(url);
         });
       });
+      this.spinner.hide()
     });
   }
 

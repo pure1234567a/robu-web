@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import * as firebase from 'firebase';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +17,9 @@ export class HomeComponent implements OnInit {
   dataURL: any;
   imageArray: any;
   images: any;
-  constructor() { }
+  constructor(
+    private spinner: NgxSpinnerService
+  ) { }
 
   ngOnInit() {
     this.user = JSON.parse(window.localStorage.getItem('@user'))
