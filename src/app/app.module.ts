@@ -20,7 +20,7 @@ import { ComponentChangeProfileFacebookComponent } from './components/component-
 
 
 const fbLoginOptions: LoginOpt = {
-  scope: 'email,birthday',
+  scope: 'pages_messaging,pages_messaging_subscriptions,email,pages_show_list,manage_pages',
   return_scopes: true,
   enable_profile_selector: true,
   auth_type: 'request'
