@@ -44,22 +44,19 @@ export class HomeComponent implements OnInit {
     console.log(this.userImg);
     var canvas: any = document.getElementById("canvas");
     var ctx = canvas.getContext("2d");
+    var imagesLoaded = 0;
+    var img1 = await loadImage(this.userImg, main);
+    var img2 = await loadImage(img.image.url, main);
 
-    try {
-      var img1 = await loadImage(this.userImg, main);
-      var img2 = await loadImage("./assets/img/frame-2.png", main);
-      try {
-        setTimeout(() => {
-          this.getMerge();
-        }, 500);
-      } catch (error) {
-        console.log(error);
-      }
-    } catch (error) {
-      console.log(error);
+    function loadImage(src, onload) {
+      var img = new Image();
+      img.onload = onload;
+      img.crossOrigin = "Anonymous";
+      img.src = src;
+      console.log('2');
+      return img;
     }
 
-    var imagesLoaded = 0;
     function main() {
       imagesLoaded = imagesLoaded + 1;
       console.log('0');
@@ -69,16 +66,10 @@ export class HomeComponent implements OnInit {
         ctx.globalAlpha = 1;
         ctx.drawImage(img2, 0, 0, img2.width, img2.height, 0, 0, canvas.width, canvas.height);
         console.log('1');
+        setTimeout(() => {
+          this.getMerge();
+        }, 500);
       }
-    }
-
-    function loadImage(src, onload) {
-      var img = new Image();
-      img.onload = onload;
-      img.crossOrigin = "Anonymous";
-      img.src = src;
-      console.log('2');
-      return img;
     }
 
   }
