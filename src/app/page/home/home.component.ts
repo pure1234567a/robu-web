@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.user = JSON.parse(window.localStorage.getItem('@user'))
-    console.log(this.user);
+    // console.log(this.user);
     if (this.user && this.user.photoUrl) {
       this.userImg = this.user.photoUrl
       // console.log('userImg : ', this.userImg)
@@ -35,21 +35,14 @@ export class HomeComponent implements OnInit {
   getFrame(e) {
     this.frameImg = e;
     this.setframe = true;
-    this.clickToMerge(e);
+    setTimeout(() => {
+      this.clickToMerge(e);
+    }, 500);
   }
 
   clickToMerge(img) {
     console.log(img);
-    if (this.userImg) {
-      console.log('มี');
-      console.log(this.userImg);
-    } else {
-      console.log('ไม่มี');
-      console.log(this.userImg);
-    }
     console.log(this.userImg);
-    // console.log(this.setframe);
-    // console.log(this.getFrameImg);
     var canvas: any = document.getElementById("canvas");
     var ctx = canvas.getContext("2d");
 
@@ -62,19 +55,9 @@ export class HomeComponent implements OnInit {
 
       if (imagesLoaded == 2) {
         // composite now
-        if (img1 && img2) {
-          console.log('มี');
-          console.log(img1);
-          console.log(img2);
-          ctx.drawImage(img1, 0, 0, img1.width, img1.height, 0, 0, canvas.width, canvas.height);
-
-          ctx.globalAlpha = 1;
-          ctx.drawImage(img2, 0, 0, img2.width, img2.height, 0, 0, canvas.width, canvas.height);
-        } else {
-          console.log('ไม่มี');
-          console.log(img1);
-          console.log(img2);
-        }
+        ctx.drawImage(img1, 0, 0, img1.width, img1.height, 0, 0, canvas.width, canvas.height);
+        ctx.globalAlpha = 1;
+        ctx.drawImage(img2, 0, 0, img2.width, img2.height, 0, 0, canvas.width, canvas.height);
       }
     }
 
