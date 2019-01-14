@@ -40,20 +40,20 @@ export class HomeComponent implements OnInit {
     }, 500);
   }
 
-  clickToMerge(img) {
+  async clickToMerge(img) {
     console.log(img);
     console.log(this.userImg);
     var canvas: any = document.getElementById("canvas");
     var ctx = canvas.getContext("2d");
 
-    var img1 = loadImage(this.userImg, main);
-    var img2 = loadImage(img.image.url, main);
+    var img1 = await loadImage(this.userImg, main);
+    var img2 = await loadImage(img.image.url, main);
 
     var imagesLoaded = 0;
     function main() {
       imagesLoaded = imagesLoaded + 1;
       console.log('0');
-      if (imagesLoaded == 1) {
+      if (imagesLoaded == 2) {
         // composite now
         ctx.drawImage(img1, 0, 0, img1.width, img1.height, 0, 0, canvas.width, canvas.height);
         ctx.globalAlpha = 1;
