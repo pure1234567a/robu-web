@@ -20,9 +20,7 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private spinner: NgxSpinnerService
-  ) {
-
-  }
+  ) { }
 
   ngOnInit() {
     this.user = JSON.parse(window.localStorage.getItem('@user'))
@@ -71,7 +69,9 @@ export class HomeComponent implements OnInit {
       console.log('2');
       return img;
     }
-    this.getMerge();
+    setTimeout(() => {
+      this.getMerge();
+    }, 500);
 
   }
 
