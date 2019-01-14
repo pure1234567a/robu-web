@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef, AfterViewChecked } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import * as firebase from 'firebase';
 import { NgxSpinnerService } from 'ngx-spinner';
 
@@ -7,7 +7,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit, AfterViewChecked {
+export class HomeComponent implements OnInit {
   setframe: Boolean = false;
   frameImg: any;
   user: any;
@@ -17,7 +17,6 @@ export class HomeComponent implements OnInit, AfterViewChecked {
   dataURL: any;
   imageArray: any;
   images: any;
-  status: Boolean = false;
 
   constructor(
     private spinner: NgxSpinnerService
@@ -31,12 +30,6 @@ export class HomeComponent implements OnInit, AfterViewChecked {
     if (this.user && this.user.photoUrl) {
       this.userImg = this.user.photoUrl
       // console.log('userImg : ', this.userImg)
-    }
-  }
-
-  ngAfterViewChecked() {
-    if (this.status) {
-      this.getMerge()
     }
   }
 
@@ -56,9 +49,8 @@ export class HomeComponent implements OnInit, AfterViewChecked {
 
     var img1 = await loadImage(this.userImg, main);
     var img2 = await loadImage(img.image.url, main);
-    this.status = await true;
-    var imagesLoaded = 0;
 
+    var imagesLoaded = 0;
     function main() {
       imagesLoaded = imagesLoaded + 1;
       console.log('0');
@@ -67,6 +59,7 @@ export class HomeComponent implements OnInit, AfterViewChecked {
         ctx.drawImage(img1, 0, 0, img1.width, img1.height, 0, 0, canvas.width, canvas.height);
         ctx.globalAlpha = 1;
         ctx.drawImage(img2, 0, 0, img2.width, img2.height, 0, 0, canvas.width, canvas.height);
+        console.log('1');
       }
     }
 
@@ -78,6 +71,8 @@ export class HomeComponent implements OnInit, AfterViewChecked {
       console.log('2');
       return img;
     }
+    this.getMerge();
+
   }
 
   getMerge() {
@@ -88,7 +83,6 @@ export class HomeComponent implements OnInit, AfterViewChecked {
     // console.log(this.images)
     this.spinner.hide();
     console.log('3');
-    this.status = false;
   }
 
 }
