@@ -4,6 +4,7 @@ import { AuthService } from "angularx-social-login";
 import { SocialUser } from "angularx-social-login";
 import { FacebookLoginProvider, GoogleLoginProvider, LinkedInLoginProvider } from "angularx-social-login"
 import { LoginResponse, FacebookService, InitParams } from 'ngx-facebook';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-login',
@@ -19,7 +20,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private authService: AuthService,
     private route: Router,
-  ) { 
+    private spinner: NgxSpinnerService
+  ) {
   }
 
   signInWithFB(): void {
@@ -34,10 +36,11 @@ export class LoginComponent implements OnInit {
     this.signInWithFB();
     this.authService.authState.subscribe((user) => {
       this.user = user;
-      this.user.photoUrl = "https://graph.facebook.com/"+this.user.id+"/picture?width=2000&height=2000"
-      window.localStorage.setItem('@user',JSON.stringify(this.user));
+      this.user.photoUrl = "https://graph.facebook.com/" + this.user.id + "/picture?width=2000&height=2000"
+      window.localStorage.setItem('@user', JSON.stringify(this.user));
       this.loggedIn = (user != null);
       this.route.navigate(['home'])
+      this.spinner.show();
     });
   }
 }
