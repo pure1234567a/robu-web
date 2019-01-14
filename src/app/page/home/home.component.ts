@@ -20,8 +20,8 @@ export class HomeComponent implements OnInit {
   constructor(
     private spinner: NgxSpinnerService
   ) {
-    
-   }
+
+  }
 
   async ngOnInit() {
     this.spinner.show()
@@ -29,9 +29,9 @@ export class HomeComponent implements OnInit {
     console.log('home : ', this.user);
     if (this.user && this.user.photoUrl) {
       this.userImg = this.user.photoUrl
-      console.log('userImg : ',this.userImg)
+      console.log('userImg : ', this.userImg)
       this.spinner.hide();
-    }else{
+    } else {
       this.spinner.hide();
     }
   }
@@ -48,7 +48,7 @@ export class HomeComponent implements OnInit {
     console.log(this.setframe);
     // console.log(this.getFrameImg);
     var canvas: any = await document.getElementById("canvas");
-    var ctx =  await canvas.getContext("2d");
+    var ctx = await canvas.getContext("2d");
 
     var img1 = await loadImage(this.userImg, main);
     var img2 = await loadImage(img.image.url, main);
@@ -76,16 +76,16 @@ export class HomeComponent implements OnInit {
     }
     setTimeout(() => {
       this.getMerge()
-      this.spinner.hide()
     }, 500);
   }
 
-  getMerge() {
-    var getCnvs = document.getElementById('canvas') as HTMLCanvasElement;
-    this.dataURL = getCnvs.toDataURL();
+  async getMerge() {
+    var getCnvs = await document.getElementById('canvas') as HTMLCanvasElement;
+    this.dataURL = await getCnvs.toDataURL();
     // console.log(this.dataURL);
-    this.images = this.dataURL;
+    this.images = await this.dataURL;
     // console.log(this.images)
+    await this.spinner.hide()
   }
 
 }
