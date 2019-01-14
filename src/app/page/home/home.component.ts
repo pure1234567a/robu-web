@@ -23,8 +23,8 @@ export class HomeComponent implements OnInit {
 
   }
 
-  async ngOnInit() {
-    this.user = await JSON.parse(window.localStorage.getItem('@user'))
+  ngOnInit() {
+    this.user = JSON.parse(window.localStorage.getItem('@user'))
     // console.log('home : ', this.user);
     if (this.user && this.user.photoUrl) {
       this.userImg = this.user.photoUrl
@@ -35,12 +35,16 @@ export class HomeComponent implements OnInit {
   getFrame(e) {
     this.frameImg = e;
     this.setframe = true;
-    setTimeout(() => {
     this.clickToMerge(e);
-    }, 100);
   }
 
   clickToMerge(img) {
+    if (!this.userImg) {
+      console.log('ไม่มี');
+    } else {
+      console.log('มี');
+    }
+    console.log(this.userImg);
     // console.log(this.setframe);
     // console.log(this.getFrameImg);
     var canvas: any = document.getElementById("canvas");
@@ -74,13 +78,13 @@ export class HomeComponent implements OnInit {
     }, 500);
   }
 
-  async getMerge() {
-    var getCnvs = await document.getElementById('canvas') as HTMLCanvasElement;
-    this.dataURL = await getCnvs.toDataURL();
+  getMerge() {
+    var getCnvs = document.getElementById('canvas') as HTMLCanvasElement;
+    this.dataURL = getCnvs.toDataURL();
     // console.log(this.dataURL);
-    this.images = await this.dataURL;
-    console.log(this.images)
-    await this.spinner.hide()
+    this.images = this.dataURL;
+    // console.log(this.images)
+    this.spinner.hide();
   }
 
 }

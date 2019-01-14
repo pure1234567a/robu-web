@@ -32,7 +32,7 @@ export class SharedComponent implements OnInit {
 
 
   ngOnInit() {
-    console.log(this.imageInput);
+    // console.log(this.imageInput);
     this.user = JSON.parse(window.localStorage.getItem('@user'));
     // console.log(this.imageInput);
   }
