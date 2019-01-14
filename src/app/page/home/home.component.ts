@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewChecked } from '@angular/core';
 import * as firebase from 'firebase';
 import { NgxSpinnerService } from 'ngx-spinner';
 
@@ -7,7 +7,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, AfterViewChecked {
   setframe: Boolean = false;
   frameImg: any;
   user: any;
@@ -17,6 +17,8 @@ export class HomeComponent implements OnInit {
   dataURL: any;
   imageArray: any;
   images: any;
+  status: Boolean = false;
+
   constructor(
     private spinner: NgxSpinnerService
   ) {
@@ -32,12 +34,18 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  ngAfterViewChecked() {
+    if (this.status) {
+      this.getMerge()
+    }
+  }
+
   getFrame(e) {
     this.frameImg = e;
     this.setframe = true;
-    setTimeout(() => {
+    if (e) {
       this.clickToMerge(e);
-    }, 500);
+    }
   }
 
   async clickToMerge(img) {
@@ -59,7 +67,7 @@ export class HomeComponent implements OnInit {
         ctx.globalAlpha = 1;
         ctx.drawImage(img2, 0, 0, img2.width, img2.height, 0, 0, canvas.width, canvas.height);
         console.log('1');
-        this.getMerge()
+        this.status = true;
       }
     }
 
@@ -81,6 +89,7 @@ export class HomeComponent implements OnInit {
     // console.log(this.images)
     this.spinner.hide();
     console.log('3');
+    this.status = false;
   }
 
 }
