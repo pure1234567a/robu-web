@@ -52,12 +52,13 @@ export class HomeComponent implements OnInit {
     var imagesLoaded = 0;
     function main() {
       imagesLoaded = imagesLoaded + 1;
-
+      console.log('0');
       if (imagesLoaded == 2) {
         // composite now
         ctx.drawImage(img1, 0, 0, img1.width, img1.height, 0, 0, canvas.width, canvas.height);
         ctx.globalAlpha = 1;
         ctx.drawImage(img2, 0, 0, img2.width, img2.height, 0, 0, canvas.width, canvas.height);
+        console.log('1');
       }
     }
 
@@ -66,6 +67,7 @@ export class HomeComponent implements OnInit {
       img.onload = onload;
       img.crossOrigin = "Anonymous";
       img.src = src;
+      console.log('2');
       return img;
     }
     setTimeout(() => {
@@ -80,6 +82,7 @@ export class HomeComponent implements OnInit {
     this.images = this.dataURL;
     // console.log(this.images)
     this.spinner.hide();
+    console.log('3');
   }
 
 }
