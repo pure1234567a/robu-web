@@ -56,8 +56,9 @@ export class HomeComponent implements OnInit, AfterViewChecked {
 
     var img1 = await loadImage(this.userImg, main);
     var img2 = await loadImage(img.image.url, main);
-
+    this.status = await true;
     var imagesLoaded = 0;
+
     function main() {
       imagesLoaded = imagesLoaded + 1;
       console.log('0');
@@ -66,8 +67,6 @@ export class HomeComponent implements OnInit, AfterViewChecked {
         ctx.drawImage(img1, 0, 0, img1.width, img1.height, 0, 0, canvas.width, canvas.height);
         ctx.globalAlpha = 1;
         ctx.drawImage(img2, 0, 0, img2.width, img2.height, 0, 0, canvas.width, canvas.height);
-        console.log('1');
-        this.status = true;
       }
     }
 
