@@ -39,10 +39,12 @@ export class HomeComponent implements OnInit {
   }
 
   clickToMerge(img) {
-    if (!this.userImg) {
-      console.log('ไม่มี');
-    } else {
+    if (this.userImg) {
       console.log('มี');
+      console.log(this.userImg);
+    } else {
+      console.log('ไม่มี');
+      console.log(this.userImg);
     }
     console.log(this.userImg);
     // console.log(this.setframe);
