@@ -22,10 +22,14 @@ export class HomeComponent implements OnInit {
   ) { }
 
   async ngOnInit() {
+    this.spinner.show()
     this.user = await JSON.parse(window.localStorage.getItem('@user'))
     console.log('home :', this.user);
     if (this.user && this.user.photoUrl) {
-      this.userImg = this.user.photoUrl
+      this.userImg = await this.user.photoUrl
+      this.spinner.hide();
+    }else{
+      this.spinner.hide();
     }
   }
 
@@ -33,7 +37,7 @@ export class HomeComponent implements OnInit {
     this.frameImg = e;
     this.setframe = true;
     // setTimeout(() => {
-      this.clickToMerge(e);
+    this.clickToMerge(e);
     // }, 100);
   }
 
@@ -75,7 +79,7 @@ export class HomeComponent implements OnInit {
 
   getMerge() {
     var getCnvs = document.getElementById('canvas') as HTMLCanvasElement;
-    this.dataURL =  getCnvs.toDataURL();
+    this.dataURL = getCnvs.toDataURL();
     // console.log(this.dataURL);
     this.images = this.dataURL;
     // console.log(this.images)
