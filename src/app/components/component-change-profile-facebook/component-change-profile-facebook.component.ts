@@ -20,7 +20,7 @@ export class ComponentChangeProfileFacebookComponent implements OnInit {
   ngOnInit() {
     this.user = JSON.parse(window.localStorage.getItem('@user'));
     if (this.user) {
-      console.log(this.user);
+      // console.log(this.user);
     }
 
   }
@@ -36,9 +36,9 @@ export class ComponentChangeProfileFacebookComponent implements OnInit {
       'url': 'https:\/\/www.khaosod.co.th\/wp-content\/uploads\/2016\/09\/14333162_320123348342430_1546313821850115366_n.jpg',
       'published': true
     }).then(res => {
-      console.log('res : ', res);
+      // console.log('res : ', res);
     }).catch(err => {
-      console.log('err : ', err);
+      // console.log('err : ', err);
     });
   }
 

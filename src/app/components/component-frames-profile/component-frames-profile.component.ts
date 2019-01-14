@@ -37,7 +37,7 @@ export class ComponentFramesProfileComponent implements OnInit {
     this.spinner.show();
     const res: any = await this.http.get('../../../assets/json/json-frame.json').toPromise();
     this.frame = res
-    console.log(this.frame);
+    // console.log(this.frame);
     this.spinner.hide();
   }
 
@@ -54,7 +54,7 @@ export class ComponentFramesProfileComponent implements OnInit {
   // ]
 
   select(img) {
-    console.log(img)
+    // console.log(img)
     this.spinner.show();
     this.check.id = img._id;
     if(this.check.id === img._id){

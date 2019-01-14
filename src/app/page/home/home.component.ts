@@ -26,10 +26,10 @@ export class HomeComponent implements OnInit {
   async ngOnInit() {
     this.spinner.show();
     this.user = await JSON.parse(window.localStorage.getItem('@user'))
-    console.log('home : ', this.user);
+    // console.log('home : ', this.user);
     if (this.user && this.user.photoUrl) {
       this.userImg = this.user.photoUrl
-      console.log('userImg : ', this.userImg)
+      // console.log('userImg : ', this.userImg)
       this.spinner.hide();
     } else {
       this.spinner.hide();
@@ -45,7 +45,7 @@ export class HomeComponent implements OnInit {
   }
 
   async clickToMerge(img) {
-    console.log(this.setframe);
+    // console.log(this.setframe);
     // console.log(this.getFrameImg);
     var canvas: any = await document.getElementById("canvas");
     var ctx = await canvas.getContext("2d");
