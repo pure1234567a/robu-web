@@ -66,11 +66,12 @@ export class HomeComponent implements OnInit {
         ctx.globalAlpha = 1;
         ctx.drawImage(img2, 0, 0, img2.width, img2.height, 0, 0, canvas.width, canvas.height);
         console.log('1');
-        setTimeout(() => {
-          return this.getMerge();
-        }, 500);
       }
     }
+
+    setTimeout(() => {
+      return this.getMerge();
+    }, 500);
 
   }
 
