@@ -23,19 +23,13 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.spinner.show();
-    try {
-      this.user = JSON.parse(window.localStorage.getItem('@user'))
-      // console.log(this.user);
-      if (this.user && this.user.photoUrl) {
-        this.userImg = this.user.photoUrl
-        // console.log('userImg : ', this.userImg)
-        this.spinner.hide();
-      }
-    } catch (error) {
-
+    this.user = JSON.parse(window.localStorage.getItem('@user'))
+    // console.log(this.user);
+    if (this.user && this.user.photoUrl) {
+      this.userImg = this.user.photoUrl
+      // console.log('userImg : ', this.userImg)
+      this.spinner.hide();
     }
-
   }
 
   getFrame(e) {
