@@ -48,6 +48,13 @@ export class HomeComponent implements OnInit {
     try {
       var img1 = await loadImage(this.userImg, main);
       var img2 = await loadImage(img.image.url, main);
+      try {
+        setTimeout(() => {
+          this.getMerge();
+        }, 500);
+      } catch (error) {
+        console.log(error);
+      }
     } catch (error) {
       console.log(error);
     }
@@ -73,10 +80,6 @@ export class HomeComponent implements OnInit {
       console.log('2');
       return img;
     }
-
-    setTimeout(() => {
-      this.getMerge();
-    }, 500);
 
   }
 
