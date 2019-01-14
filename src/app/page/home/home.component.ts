@@ -44,14 +44,14 @@ export class HomeComponent implements OnInit {
     // }, 100);
   }
 
-  clickToMerge(img) {
+  async clickToMerge(img) {
     console.log(this.setframe);
     // console.log(this.getFrameImg);
-    var canvas: any = document.getElementById("canvas");
-    var ctx = canvas.getContext("2d");
+    var canvas: any = await document.getElementById("canvas");
+    var ctx =  await canvas.getContext("2d");
 
-    var img1 = loadImage(this.userImg, main);
-    var img2 = loadImage(img.image.url, main);
+    var img1 = await loadImage(this.userImg, main);
+    var img2 = await loadImage(img.image.url, main);
 
     var imagesLoaded = 0;
     function main() {
