@@ -40,7 +40,6 @@ export class LoginComponent implements OnInit {
       window.localStorage.setItem('@user', JSON.stringify(this.user));
       this.loggedIn = (user != null);
       this.route.navigate(['home'])
-      this.spinner.show();
     });
   }
 }

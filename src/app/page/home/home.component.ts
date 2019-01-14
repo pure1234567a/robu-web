@@ -23,8 +23,8 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-
-    setTimeout(() => {
+    this.spinner.show();
+    try {
       this.user = JSON.parse(window.localStorage.getItem('@user'))
       // console.log(this.user);
       if (this.user && this.user.photoUrl) {
@@ -32,7 +32,9 @@ export class HomeComponent implements OnInit {
         // console.log('userImg : ', this.userImg)
         this.spinner.hide();
       }
-    }, 5000);
+    } catch (error) {
+
+    }
 
   }
 
