@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
   }
 
   async ngOnInit() {
-    this.spinner.show()
+    this.spinner.show();
     this.user = await JSON.parse(window.localStorage.getItem('@user'))
     console.log('home : ', this.user);
     if (this.user && this.user.photoUrl) {
@@ -83,7 +83,7 @@ export class HomeComponent implements OnInit {
     this.dataURL = await getCnvs.toDataURL();
     // console.log(this.dataURL);
     this.images = await this.dataURL;
-    // console.log(this.images)
+    console.log(this.images)
     await this.spinner.hide()
   }
 

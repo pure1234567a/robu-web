@@ -34,9 +34,11 @@ export class ComponentFramesProfileComponent implements OnInit {
   }
 
   async getFrame() {
+    this.spinner.show();
     const res: any = await this.http.get('../../../assets/json/json-frame.json').toPromise();
     this.frame = res
     console.log(this.frame);
+    this.spinner.hide();
   }
 
   // image: Frame[] = [

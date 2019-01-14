@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, AfterViewChecked, ViewChild, ElementRef } from '@angular/core';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-component-profile',
@@ -13,12 +14,16 @@ export class ComponentProfileComponent implements OnInit, AfterViewChecked {
   // userImg: any;
   @ViewChild('canvas') canvas: ElementRef
 
-  constructor() {
+  constructor(
+    private spinner: NgxSpinnerService,
+  ) {
 
   }
 
   ngOnInit() {
+    this.spinner.show();
     this.user = JSON.parse(window.localStorage.getItem('@user'))
+    this.spinner.hide();
     // if (this.user) {
     //   console.log(this.user);
     //   this.userImg = this.user.photoUrl
