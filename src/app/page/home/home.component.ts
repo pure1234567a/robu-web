@@ -53,7 +53,7 @@ export class HomeComponent implements OnInit {
     function main() {
       imagesLoaded = imagesLoaded + 1;
       console.log('0');
-      if (imagesLoaded == 2) {
+      if (imagesLoaded == 1) {
         // composite now
         ctx.drawImage(img1, 0, 0, img1.width, img1.height, 0, 0, canvas.width, canvas.height);
         ctx.globalAlpha = 1;
