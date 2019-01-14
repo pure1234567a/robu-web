@@ -47,8 +47,8 @@ export class HomeComponent implements OnInit {
     var canvas: any = document.getElementById("canvas");
     var ctx = canvas.getContext("2d");
     var imagesLoaded = 0;
-    var img1 = await loadImage(this.userImg, main);
-    var img2 = await loadImage(img.image.url, main);
+    var img1 = loadImage(this.userImg, main);
+    var img2 = loadImage(img.image.url, main);
 
     function loadImage(src, onload) {
       var img = new Image();
@@ -73,7 +73,7 @@ export class HomeComponent implements OnInit {
 
     setTimeout(() => {
       return this.getMerge();
-    }, 500);
+    }, 50);
 
   }
 
