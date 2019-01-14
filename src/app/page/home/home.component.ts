@@ -19,18 +19,20 @@ export class HomeComponent implements OnInit {
   images: any;
   constructor(
     private spinner: NgxSpinnerService
-  ) { }
-
-  async ngOnInit() {
+  ) {
     this.spinner.show()
-    this.user = await JSON.parse(window.localStorage.getItem('@user'))
+    this.user = JSON.parse(window.localStorage.getItem('@user'))
     console.log('home :', this.user);
     if (this.user && this.user.photoUrl) {
-      this.userImg = await this.user.photoUrl
+      this.userImg = this.user.photoUrl
       this.spinner.hide();
     }else{
       this.spinner.hide();
     }
+   }
+
+   ngOnInit() {
+    
   }
 
   getFrame(e) {
