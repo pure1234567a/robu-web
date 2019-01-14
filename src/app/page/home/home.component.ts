@@ -9,7 +9,6 @@ import { NgxSpinnerService } from 'ngx-spinner';
 })
 export class HomeComponent implements OnInit {
   setframe: Boolean = false;
-  frameImg: any;
   user: any;
   userImg: any = "https://scontent.fbkk12-1.fna.fbcdn.net/v/t1.0-9/33037353_1774105469351187_6162166278820724736_n.jpg?_nc_cat=106&_nc_ht=scontent.fbkk12-1.fna&oh=2a5f4827d44e73fcc805042ec15d83d4&oe=5CC6C4D2"
   // userImg: any;
@@ -34,7 +33,6 @@ export class HomeComponent implements OnInit {
   }
 
   getFrame(e) {
-    this.frameImg = e;
     this.setframe = true;
     if (e) {
       this.clickToMerge(e);
@@ -44,14 +42,16 @@ export class HomeComponent implements OnInit {
   async clickToMerge(img) {
     console.log(img);
     console.log(this.userImg);
-    var canvas: any = document.getElementById("canvas");
-    var ctx = canvas.getContext("2d");
-    var imagesLoaded = 0;
-    var img1 = loadImage(this.userImg, main);
-    var img2 = loadImage(img.image.url, main);
+    let frame: String = img.image.url;
+    let profile: String = this.userImg;
+    let canvas: any = document.getElementById("canvas");
+    let ctx = canvas.getContext("2d");
+    let imagesLoaded = 0;
+    let img1 = loadImage(profile, main);
+    let img2 = loadImage(frame, main);
 
     function loadImage(src, onload) {
-      var img = new Image();
+      let img = new Image();
       img.onload = onload;
       img.crossOrigin = "Anonymous";
       img.src = src;
@@ -78,7 +78,7 @@ export class HomeComponent implements OnInit {
   }
 
   getMerge() {
-    var getCnvs = document.getElementById('canvas') as HTMLCanvasElement;
+    let getCnvs = document.getElementById('canvas') as HTMLCanvasElement;
     this.dataURL = getCnvs.toDataURL();
     // console.log(this.dataURL);
     this.images = this.dataURL;
