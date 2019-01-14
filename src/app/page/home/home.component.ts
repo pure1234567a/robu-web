@@ -36,11 +36,11 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  getFrame(e) {
-    this.frameImg = e;
-    this.setframe = true;
+  async getFrame(e) {
+    this.frameImg = await e;
+    this.setframe = await true;
     // setTimeout(() => {
-    this.clickToMerge(e);
+    await this.clickToMerge(e);
     // }, 100);
   }
 
@@ -68,15 +68,12 @@ export class HomeComponent implements OnInit {
 
     function loadImage(src, onload) {
       var img = new Image();
-
       img.onload = onload;
       img.crossOrigin = "Anonymous";
       img.src = src;
       return img;
     }
-    setTimeout(() => {
-      this.getMerge()
-    }, 500);
+    this.getMerge()
   }
 
   async getMerge() {
