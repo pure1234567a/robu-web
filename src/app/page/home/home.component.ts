@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.user = JSON.parse(window.localStorage.getItem('@user'))
-    // console.log('home : ', this.user);
+    console.log(this.user);
     if (this.user && this.user.photoUrl) {
       this.userImg = this.user.photoUrl
       // console.log('userImg : ', this.userImg)
@@ -39,6 +39,7 @@ export class HomeComponent implements OnInit {
   }
 
   clickToMerge(img) {
+    console.log(img);
     if (this.userImg) {
       console.log('มี');
       console.log(this.userImg);
