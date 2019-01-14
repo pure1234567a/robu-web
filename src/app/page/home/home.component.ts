@@ -47,7 +47,7 @@ export class HomeComponent implements OnInit {
 
     try {
       var img1 = await loadImage(this.userImg, main);
-      var img2 = await loadImage(img.image.url, main);
+      var img2 = await loadImage("./assets/img/frame-2.png", main);
       try {
         setTimeout(() => {
           this.getMerge();
