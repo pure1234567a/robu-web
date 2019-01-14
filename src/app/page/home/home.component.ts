@@ -59,6 +59,7 @@ export class HomeComponent implements OnInit {
         ctx.globalAlpha = 1;
         ctx.drawImage(img2, 0, 0, img2.width, img2.height, 0, 0, canvas.width, canvas.height);
         console.log('1');
+        this.getMerge()
       }
     }
 
@@ -70,9 +71,6 @@ export class HomeComponent implements OnInit {
       console.log('2');
       return img;
     }
-    setTimeout(() => {
-      this.getMerge()
-    }, 500);
   }
 
   getMerge() {
