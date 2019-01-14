@@ -62,10 +62,19 @@ export class HomeComponent implements OnInit {
 
       if (imagesLoaded == 2) {
         // composite now
-        ctx.drawImage(img1, 0, 0, img1.width, img1.height, 0, 0, canvas.width, canvas.height);
+        if (img1 && img2) {
+          console.log('มี');
+          console.log(img1);
+          console.log(img2);
+          ctx.drawImage(img1, 0, 0, img1.width, img1.height, 0, 0, canvas.width, canvas.height);
 
-        ctx.globalAlpha = 1;
-        ctx.drawImage(img2, 0, 0, img2.width, img2.height, 0, 0, canvas.width, canvas.height);
+          ctx.globalAlpha = 1;
+          ctx.drawImage(img2, 0, 0, img2.width, img2.height, 0, 0, canvas.width, canvas.height);
+        } else {
+          console.log('ไม่มี');
+          console.log(img1);
+          console.log(img2);
+        }
       }
     }
 
