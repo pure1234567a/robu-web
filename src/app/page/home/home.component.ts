@@ -67,7 +67,7 @@ export class HomeComponent implements OnInit {
         ctx.drawImage(img2, 0, 0, img2.width, img2.height, 0, 0, canvas.width, canvas.height);
         console.log('1');
         setTimeout(() => {
-          this.getMerge();
+          return this.getMerge();
         }, 500);
       }
     }
