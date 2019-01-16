@@ -54,7 +54,9 @@ export class SharedComponent implements OnInit {
             // 'og:url': 'https://angular-for-seo.firebaseapp.com',
             'og:title': 'RabuRabuLoveLove',
             'og:description': 'ข้อความยาว ๆ',
-            'og:image': res
+            'og:image': res,
+            'og:image:width':"700",
+            'og:image:height':"1200"
           }
         })
       };
