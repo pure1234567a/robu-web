@@ -29,5 +29,11 @@
         },{
             "_id": "10",
             "image": {"url":"./assets/img/frame.png"}
+        },{
+            "_id": "11",
+            "image": {"url":"./assets/img/frame-21.png"}
+        },{
+            "_id": "12",
+            "image": {"url":"./assets/img/frame22.png"}
         }]
 }
