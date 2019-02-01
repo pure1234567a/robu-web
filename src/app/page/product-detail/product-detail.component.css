@@ -32,3 +32,11 @@
 .scroll-detail {
     overflow: auto;
 }
+
+.font-detail {
+    font-size: 13px;
+}
+
+.color-title {
+    color: hotpink;
+}
