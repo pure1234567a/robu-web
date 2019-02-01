@@ -50,8 +50,8 @@ export class LoginComponent implements OnInit {
       let dataUser = JSON.parse(window.localStorage.getItem('@user'));
       console.log(dataUser);
       let data = {
-        username: dataUser.email ? dataUser.email : dataUser.firstName + dataUser.lastName,
-        password: 'P@ssw0rd'
+        username: 'admin',
+        password: '1234'
       }
       let user: any = this.seviceApi.saveUser(data);
       console.log('login' + user)
@@ -59,11 +59,11 @@ export class LoginComponent implements OnInit {
       if (!user) {
         console.log('regis');
         let dataRegis = {
-          username: dataUser.email ? dataUser.email : dataUser.firstName + dataUser.lastName,
+          username: "boom",
           password: 'P@ssw0rd',
-          firstname: dataUser.firstName,
-          lastname: dataUser.lastName,
-          email: dataUser.email ? dataUser.email : dataUser.firstName + dataUser.lastName + '@hotmail.com'
+          firstname: 'boom',
+          lastname: 'jaidee',
+          email: 'boom@hotmail.com'
         }
         let res: any = this.seviceApi.sigup(dataRegis)
         console.log('resiter' + res)
