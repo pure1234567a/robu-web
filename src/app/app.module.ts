@@ -17,6 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { SocialLoginModule, AuthServiceConfig, LoginOpt, FacebookLoginProvider } from "angularx-social-login";
 import { ComponentChangeProfileFacebookComponent } from './components/component-change-profile-facebook/component-change-profile-facebook.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { ProductDetailComponent } from './page/product-detail/product-detail.component';
 import { SelectedProductComponent } from './page/selected-product/selected-product.component';
 
@@ -48,6 +50,7 @@ export function provideConfig() {
     SharedComponent,
     ComponentProfileComponent,
     ComponentChangeProfileFacebookComponent,
+    ToolbarComponent,
     ProductDetailComponent,
     SelectedProductComponent
   ],
@@ -63,12 +66,14 @@ export function provideConfig() {
     SocialLoginModule,
     FacebookModule.forRoot(),
     HttpClientModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    MatToolbarModule
   ],
   exports: [
     MatButtonModule,
     MatCheckboxModule,
-    MatGridListModule
+    MatGridListModule,
+    MatToolbarModule
   ],
   providers: [
     {
