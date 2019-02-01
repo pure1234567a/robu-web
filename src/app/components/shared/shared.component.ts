@@ -32,7 +32,7 @@ export class SharedComponent implements OnInit {
 
 
   ngOnInit() {
-    console.log(this.imageInput);
+    // console.log(this.imageInput);
     this.user = JSON.parse(window.localStorage.getItem('@user'));
     // console.log(this.imageInput);
   }
@@ -84,6 +84,7 @@ export class SharedComponent implements OnInit {
     //   .catch((e: any) => console.error(e));
 
   }
+<<<<<<< HEAD
   // pushUpload(base64) {
   //   this.spinner.show()
   //   return new Promise((resove, reject) => {
@@ -98,5 +99,21 @@ export class SharedComponent implements OnInit {
   //     this.spinner.hide()
   //   });
   // }
+=======
+  pushUpload(base64) {
+
+    return new Promise((resove, reject) => {
+      const storageRef = firebase.storage().ref();
+      const fileRandom = Math.floor((Date.now() / 1000) + new Date().getUTCMilliseconds());
+      const uploadTask: any = storageRef.child(`images/uploads/${fileRandom}.jpg`);
+      uploadTask.putString(base64, firebase.storage.StringFormat.DATA_URL).then((snapshot) => {
+        uploadTask.getDownloadURL().then(url => {
+          resove(url);
+        });
+      });
+
+    });
+  }
+>>>>>>> 0660d82151a60893bfc19c3fc69b7d1005de3d10
 
 }

@@ -17,6 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { SocialLoginModule, AuthServiceConfig, LoginOpt, FacebookLoginProvider } from "angularx-social-login";
 import { ComponentChangeProfileFacebookComponent } from './components/component-change-profile-facebook/component-change-profile-facebook.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { ProductDetailComponent } from './page/product-detail/product-detail.component';
+import { SelectedProductComponent } from './page/selected-product/selected-product.component';
 
 
 const fbLoginOptions: LoginOpt = {
@@ -45,7 +47,9 @@ export function provideConfig() {
     HomeComponent,
     SharedComponent,
     ComponentProfileComponent,
-    ComponentChangeProfileFacebookComponent
+    ComponentChangeProfileFacebookComponent,
+    ProductDetailComponent,
+    SelectedProductComponent
   ],
   imports: [
     BrowserModule,

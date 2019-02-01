@@ -3,6 +3,6 @@
 </div> -->
 <div class="row" ng-class="home" *ngIf="frame && frame.data">
   <div align-self-center class="col-2 center " *ngFor="let img of frame.data" (click)="select(img)">
-    <img src="{{img.image.url}}" style="width: 100%;" alt="error" [ngClass]="{'selectItem':check.id===img._id}">
+    <img src="{{img.image.url}}" style="width: 100%;" alt="error" [ngClass]="{'selectItem':check.id === img._id}">
   </div>
 </div>

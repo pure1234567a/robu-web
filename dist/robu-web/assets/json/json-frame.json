@@ -23,5 +23,11 @@
         },{
             "_id": "8",
             "image": {"url":"https://res.cloudinary.com/dyiuidzsc/image/upload/v1546922690/Rabu%20Rabu/f3.png"}
+        },{
+            "_id": "9",
+            "image": {"url":"./assets/img/7246.png"}
+        },{
+            "_id": "10",
+            "image": {"url":"./assets/img/frame.png"}
         }]
 }

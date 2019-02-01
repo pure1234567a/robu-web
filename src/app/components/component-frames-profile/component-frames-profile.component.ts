@@ -34,9 +34,11 @@ export class ComponentFramesProfileComponent implements OnInit {
   }
 
   async getFrame() {
+    this.spinner.show();
     const res: any = await this.http.get('../../../assets/json/json-frame.json').toPromise();
     this.frame = res
-    console.log(this.frame);
+    // console.log(this.frame);
+    this.spinner.hide();
   }
 
   // image: Frame[] = [
@@ -52,10 +54,13 @@ export class ComponentFramesProfileComponent implements OnInit {
   // ]
 
   select(img) {
-    console.log(img)
+    // console.log(img)
     this.spinner.show();
-    this.check.id = img._id
+    this.check.id = img._id;
+    if(this.check.id === img._id){
     this.sendFrame.emit(img);
+
+    }
     // this.clickToMerge(img);
   }
 

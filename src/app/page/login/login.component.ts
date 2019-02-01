@@ -4,6 +4,7 @@ import { AuthService } from "angularx-social-login";
 import { SocialUser } from "angularx-social-login";
 import { FacebookLoginProvider, GoogleLoginProvider, LinkedInLoginProvider } from "angularx-social-login"
 import { LoginResponse, FacebookService, InitParams } from 'ngx-facebook';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-login',
@@ -19,6 +20,7 @@ export class LoginComponent implements OnInit {
   constructor(
     private authService: AuthService,
     private route: Router,
+    private spinner: NgxSpinnerService
   ) {
   }
 
