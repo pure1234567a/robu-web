@@ -11,6 +11,8 @@ import { NgxSpinnerService } from 'ngx-spinner';
 })
 export class SharedComponent implements OnInit {
   @Input() imageInput: any;
+  @Input() detailInput: any;
+
   // private basePath: string = '/uploads';
   imageArray: any = [];
   // currentUpload: ClassUpload;
@@ -33,6 +35,7 @@ export class SharedComponent implements OnInit {
 
   ngOnInit() {
     // console.log(this.imageInput);
+    console.log(this.images);
     this.user = JSON.parse(window.localStorage.getItem('@user'));
     // console.log(this.imageInput);
   }
@@ -53,8 +56,8 @@ export class SharedComponent implements OnInit {
         object: {
           // 'og:url': 'https://angular-for-seo.firebaseapp.com',
           'og:title': 'RabuRabuLoveLove',
-          'og:description': 'ข้อความยาว ๆ',
-          'og:image': 'https://cache.gmo2.sistacafe.com/images/uploads/summary/image/41751/3e9fea8de38ad5631fd691a1e9c54c26.jpg'
+          'og:description': this.detailInput,
+          'og:image': this.imageInput
         }
       })
     };

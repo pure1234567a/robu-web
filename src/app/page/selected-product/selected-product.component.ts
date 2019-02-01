@@ -12,7 +12,7 @@ export class SelectedProductComponent implements OnInit {
   data: any;
 
   constructor(
-    private seviceApi: ServiceApiService,
+    private serviceApi: ServiceApiService,
     private router: Router,
   ) { }
 
@@ -21,7 +21,7 @@ export class SelectedProductComponent implements OnInit {
   }
 
   async getData() {
-    const res: any = await this.seviceApi.getProd();
+    const res: any = await this.serviceApi.getProd();
     this.data = res.data
     console.log(this.data)
   }
