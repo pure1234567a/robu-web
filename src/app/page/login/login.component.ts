@@ -1,3 +1,4 @@
+import { ServiceApiService } from './../../services/service-api/service-api.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from "angularx-social-login";
@@ -20,7 +21,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private authService: AuthService,
     private route: Router,
-    private spinner: NgxSpinnerService
+    private spinner: NgxSpinnerService,
+    private seviceApi: ServiceApiService
   ) {
   }
 
@@ -52,7 +54,7 @@ export class LoginComponent implements OnInit {
         password: 'P@ssw0rd'
       }
       let user: any = this.seviceApi.saveUser(data);
-      console.log('login'+user)
+      console.log('login' + user)
       console.log('login')
       if (!user) {
         console.log('regis');
@@ -64,10 +66,10 @@ export class LoginComponent implements OnInit {
           email: dataUser.email ? dataUser.email : dataUser.firstName + dataUser.lastName + '@hotmail.com'
         }
         let res: any = this.seviceApi.sigup(dataRegis)
-        console.log('resiter'+res)
+        console.log('resiter' + res)
       }
     } catch (error) {
-      console.log('error '+error)
+      console.log('error ' + error)
     }
   }
 }
