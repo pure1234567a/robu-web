@@ -23,7 +23,7 @@ export class SelectedProductComponent implements OnInit {
   async getData() {
     const res: any = await this.serviceApi.getProd();
     this.data = res.data
-    // console.log(this.data)
+    console.log(this.data)
   }
 
   openProductDetail(item) {

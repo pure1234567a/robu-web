@@ -1,14 +1,14 @@
 <div class="row">
-  <div class="col-2"></div>
-  <div class="col-8">
-      <p>
-          <span class="mr-2 font-header">my</span>
-          <span class="mr-2 font-header">Lips</span>
-          <span class="mr-2 font-header">my</span>
-          <span class="mr-2 font-header">Life</span>
-      </p>
-  </div>
-  <div class="col-2"></div>
+    <div class="col-2"></div>
+    <div class="col-8">
+        <p>
+            <span class="mr-2 font-header">my</span>
+            <span class="mr-2 font-header">Lips</span>
+            <span class="mr-2 font-header">my</span>
+            <span class="mr-2 font-header">Life</span>
+        </p>
+    </div>
+    <div class="col-2"></div>
 </div>
 
 <div class="row">
@@ -34,4 +34,4 @@
 </div>
 
 
-<app-shared></app-shared>
+<app-shared *ngIf="productDetail && productDetail.productcolor && productDetail.detail" [detailInput]="productDetail.detail" [imageInput]="productDetail.productcolor"></app-shared>
