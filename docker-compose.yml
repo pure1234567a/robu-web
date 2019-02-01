@@ -1,7 +1,7 @@
 version: '3'
 services:
   web:
-    image: cyberadvance/raburabulovelove
+    image: pure1234567a/raburabulovelove
     ports: 
       - "80:80"
     deploy:
