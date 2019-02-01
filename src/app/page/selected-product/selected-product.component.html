@@ -1,3 +1,31 @@
-<p>
-  selected-product works!
-</p>
+<div class="row">
+  <div class="col-2"></div>
+  <div class="col-8">
+    <p>
+      <span class="mr-2 font-header">my</span>
+      <span class="mr-2 font-header color-font">Lips</span>
+      <span class="mr-2 font-header">my</span>
+      <span class="mr-2 font-header color-font">Life</span>
+    </p>
+  </div>
+  <div class="col-2"></div>
+</div>
+
+<div class="row">
+  <div class="col-2"></div>
+  <div class="col-8">
+    <div style="display: inline" *ngFor="let item of data">
+      <img class="size-image margin-image border-image" [src]="item.color" alt="color" (click)="openProductDetail(item)">
+    </div>
+  </div>
+  <div class="col-2"></div>
+</div>
+
+<div class="row">
+  <div class="col-2"></div>
+  <div class="col-8">
+    <img class="border-image full-width" src="https://res.cloudinary.com/dyiuidzsc/image/upload/v1548991563/Rabu%20Rabu/perfect%20lips/project.jpg"
+      alt="">
+  </div>
+  <div class="col-2"></div>
+</div>

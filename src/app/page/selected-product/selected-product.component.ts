@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ServiceApiService } from 'src/app/services/service-api/service-api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-selected-product',
@@ -7,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SelectedProductComponent implements OnInit {
 
-  constructor() { }
+  data: any;
+
+  constructor(
+    private seviceApi: ServiceApiService,
+    private router: Router,
+  ) { }
 
   ngOnInit() {
+    this.getData();
+  }
+
+  async getData() {
+    const res: any = await this.seviceApi.getProd();
+    this.data = res.data
+    console.log(this.data)
+  }
+
+  openProductDetail(item) {
+    this.router.navigate(['product-detail'], { queryParams: { id: item._id } })
   }
 
 }
