@@ -5473,11 +5473,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
 module.exports = __webpack_require__(/*! D:\html\robu-web\src\polyfills.ts */"./src/polyfills.ts");
-=======
-module.exports = __webpack_require__(/*! D:\rabu\web\robu-web\src\polyfills.ts */"./src/polyfills.ts");
->>>>>>> 8c8d0b5c3fb2ba39a8db3a2aa8c963ac2ce548b1
 
 
 /***/ })

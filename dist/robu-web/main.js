@@ -38,11 +38,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _page_home_home_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./page/home/home.component */ "./src/app/page/home/home.component.ts");
-<<<<<<< HEAD
-=======
 /* harmony import */ var _page_selected_product_selected_product_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./page/selected-product/selected-product.component */ "./src/app/page/selected-product/selected-product.component.ts");
 /* harmony import */ var _page_product_detail_product_detail_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./page/product-detail/product-detail.component */ "./src/app/page/product-detail/product-detail.component.ts");
->>>>>>> 8c8d0b5c3fb2ba39a8db3a2aa8c963ac2ce548b1
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -54,20 +51,14 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 8c8d0b5c3fb2ba39a8db3a2aa8c963ac2ce548b1
 var routes = [
     { path: 'home', component: _page_home_home_component__WEBPACK_IMPORTED_MODULE_4__["HomeComponent"] },
     { path: '', redirectTo: '/login', pathMatch: 'full' },
     { path: 'login', component: _page_login_login_component__WEBPACK_IMPORTED_MODULE_0__["LoginComponent"] },
-<<<<<<< HEAD
-=======
     { path: 'product-detail', component: _page_product_detail_product_detail_component__WEBPACK_IMPORTED_MODULE_6__["ProductDetailComponent"] },
     { path: 'select-product', component: _page_selected_product_selected_product_component__WEBPACK_IMPORTED_MODULE_5__["SelectedProductComponent"] },
->>>>>>> 8c8d0b5c3fb2ba39a8db3a2aa8c963ac2ce548b1
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -109,11 +100,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-<<<<<<< HEAD
-module.exports = "<div class=\"container\">\r\n    <router-outlet></router-outlet>\r\n</div>\r\n<ngx-spinner bdColor=\"rgba(51,51,51,0.8)\" size=\"medium\" color=\"#ff9558\" type=\"ball-atom\">\r\n    <p style=\"font-size: 14px; color: white; margin-top: 14px;\">กำลังโหลด...</p>\r\n  </ngx-spinner>"
-=======
 module.exports = "<app-toolbar></app-toolbar>\r\n<div class=\"container\">\r\n    <router-outlet></router-outlet>\r\n</div>\r\n<ngx-spinner bdColor=\"rgba(51,51,51,0.8)\" size=\"medium\" color=\"#ff9558\" type=\"ball-atom\">\r\n    <p style=\"font-size: 14px; color: white; margin-top: 14px;\">กำลังโหลด...</p>\r\n</ngx-spinner>"
->>>>>>> 8c8d0b5c3fb2ba39a8db3a2aa8c963ac2ce548b1
 
 /***/ }),
 
@@ -200,13 +187,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var angularx_social_login__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! angularx-social-login */ "./node_modules/angularx-social-login/angularx-social-login.es5.js");
 /* harmony import */ var _components_component_change_profile_facebook_component_change_profile_facebook_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/component-change-profile-facebook/component-change-profile-facebook.component */ "./src/app/components/component-change-profile-facebook/component-change-profile-facebook.component.ts");
 /* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
-<<<<<<< HEAD
-=======
 /* harmony import */ var _components_toolbar_toolbar_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/toolbar/toolbar.component */ "./src/app/components/toolbar/toolbar.component.ts");
 /* harmony import */ var _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/material/toolbar */ "./node_modules/@angular/material/esm5/toolbar.es5.js");
 /* harmony import */ var _page_product_detail_product_detail_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./page/product-detail/product-detail.component */ "./src/app/page/product-detail/product-detail.component.ts");
 /* harmony import */ var _page_selected_product_selected_product_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./page/selected-product/selected-product.component */ "./src/app/page/selected-product/selected-product.component.ts");
->>>>>>> 8c8d0b5c3fb2ba39a8db3a2aa8c963ac2ce548b1
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -230,13 +214,10 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> 8c8d0b5c3fb2ba39a8db3a2aa8c963ac2ce548b1
 var fbLoginOptions = {
     scope: 'pages_messaging,pages_messaging_subscriptions,email,pages_show_list,manage_pages',
     return_scopes: true,
@@ -264,14 +245,10 @@ var AppModule = /** @class */ (function () {
                 _page_home_home_component__WEBPACK_IMPORTED_MODULE_9__["HomeComponent"],
                 _components_shared_shared_component__WEBPACK_IMPORTED_MODULE_10__["SharedComponent"],
                 _components_component_profile_component_profile_component__WEBPACK_IMPORTED_MODULE_12__["ComponentProfileComponent"],
-<<<<<<< HEAD
-                _components_component_change_profile_facebook_component_change_profile_facebook_component__WEBPACK_IMPORTED_MODULE_15__["ComponentChangeProfileFacebookComponent"]
-=======
                 _components_component_change_profile_facebook_component_change_profile_facebook_component__WEBPACK_IMPORTED_MODULE_15__["ComponentChangeProfileFacebookComponent"],
                 _components_toolbar_toolbar_component__WEBPACK_IMPORTED_MODULE_17__["ToolbarComponent"],
                 _page_product_detail_product_detail_component__WEBPACK_IMPORTED_MODULE_19__["ProductDetailComponent"],
                 _page_selected_product_selected_product_component__WEBPACK_IMPORTED_MODULE_20__["SelectedProductComponent"]
->>>>>>> 8c8d0b5c3fb2ba39a8db3a2aa8c963ac2ce548b1
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -285,22 +262,14 @@ var AppModule = /** @class */ (function () {
                 angularx_social_login__WEBPACK_IMPORTED_MODULE_14__["SocialLoginModule"],
                 ngx_facebook__WEBPACK_IMPORTED_MODULE_11__["FacebookModule"].forRoot(),
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_13__["HttpClientModule"],
-<<<<<<< HEAD
-                ngx_spinner__WEBPACK_IMPORTED_MODULE_16__["NgxSpinnerModule"]
-=======
                 ngx_spinner__WEBPACK_IMPORTED_MODULE_16__["NgxSpinnerModule"],
                 _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_18__["MatToolbarModule"]
->>>>>>> 8c8d0b5c3fb2ba39a8db3a2aa8c963ac2ce548b1
             ],
             exports: [
                 _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatButtonModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatCheckboxModule"],
-<<<<<<< HEAD
-                _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatGridListModule"]
-=======
                 _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatGridListModule"],
                 _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_18__["MatToolbarModule"]
->>>>>>> 8c8d0b5c3fb2ba39a8db3a2aa8c963ac2ce548b1
             ],
             providers: [
                 {
@@ -686,13 +655,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SharedComponent", function() { return SharedComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var ngx_facebook__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ngx-facebook */ "./node_modules/ngx-facebook/dist/esm/index.js");
-<<<<<<< HEAD
-/* harmony import */ var firebase__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! firebase */ "./node_modules/firebase/dist/index.cjs.js");
-/* harmony import */ var firebase__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(firebase__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
-=======
 /* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
->>>>>>> 8c8d0b5c3fb2ba39a8db3a2aa8c963ac2ce548b1
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -705,10 +668,6 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 8c8d0b5c3fb2ba39a8db3a2aa8c963ac2ce548b1
 // import { ClassUpload } from './class-upload';
 var SharedComponent = /** @class */ (function () {
     function SharedComponent(fb, spinner) {
@@ -717,17 +676,14 @@ var SharedComponent = /** @class */ (function () {
         // private basePath: string = '/uploads';
         this.imageArray = [];
         var initParams = {
-<<<<<<< HEAD
-            appId: '2134431583284588',
-=======
             appId: '391466811398230',
->>>>>>> 8c8d0b5c3fb2ba39a8db3a2aa8c963ac2ce548b1
             version: 'v3.2'
         };
         fb.init(initParams);
     }
     SharedComponent.prototype.ngOnInit = function () {
         // console.log(this.imageInput);
+        console.log(this.images);
         this.user = JSON.parse(window.localStorage.getItem('@user'));
         // console.log(this.imageInput);
     };
@@ -738,31 +694,6 @@ var SharedComponent = /** @class */ (function () {
     //   element.click();
     // }
     SharedComponent.prototype.shareWithOpenGraphActions = function () {
-<<<<<<< HEAD
-        var _this = this;
-        this.spinner.show();
-        this.pushUpload(this.imageInput).then(function (res) {
-            var params = {
-                method: 'share',
-                action_type: 'og.likes',
-                action_properties: JSON.stringify({
-                    object: {
-                        // 'og:url': 'https://angular-for-seo.firebaseapp.com',
-                        'og:title': 'RabuRabuLoveLove',
-                        'og:description': 'ข้อความยาว ๆ',
-                        'og:image': res
-                    }
-                })
-            };
-            _this.fb.ui(params)
-                .then(function (res) { return console.log(res); })
-                .catch(function (e) { return console.error(e); });
-            _this.spinner.hide();
-        }).catch(function (err) {
-            console.log(err);
-            _this.spinner.hide();
-        });
-=======
         // this.pushUpload(this.imageInput).then(res => {
         var params = {
             method: 'share',
@@ -771,8 +702,8 @@ var SharedComponent = /** @class */ (function () {
                 object: {
                     // 'og:url': 'https://angular-for-seo.firebaseapp.com',
                     'og:title': 'RabuRabuLoveLove',
-                    'og:description': 'ข้อความยาว ๆ',
-                    'og:image': 'https://cache.gmo2.sistacafe.com/images/uploads/summary/image/41751/3e9fea8de38ad5631fd691a1e9c54c26.jpg'
+                    'og:description': this.detailInput,
+                    'og:image': this.imageInput
                 }
             })
         };
@@ -782,7 +713,6 @@ var SharedComponent = /** @class */ (function () {
         // }).catch(err => {
         //   console.log(err)
         // });
->>>>>>> 8c8d0b5c3fb2ba39a8db3a2aa8c963ac2ce548b1
         // const image = await this.pushUpload(this.imageInput);
         // console.log(image);
         // const params: UIParams = {
@@ -801,25 +731,14 @@ var SharedComponent = /** @class */ (function () {
         //   .then((res: UIResponse) => console.log(res))
         //   .catch((e: any) => console.error(e));
     };
-<<<<<<< HEAD
-    SharedComponent.prototype.pushUpload = function (base64) {
-        return new Promise(function (resove, reject) {
-            var storageRef = firebase__WEBPACK_IMPORTED_MODULE_2__["storage"]().ref();
-            var fileRandom = Math.floor((Date.now() / 1000) + new Date().getUTCMilliseconds());
-            var uploadTask = storageRef.child("images/uploads/" + fileRandom + ".jpg");
-            uploadTask.putString(base64, firebase__WEBPACK_IMPORTED_MODULE_2__["storage"].StringFormat.DATA_URL).then(function (snapshot) {
-                uploadTask.getDownloadURL().then(function (url) {
-                    resove(url);
-                });
-            });
-        });
-    };
-=======
->>>>>>> 8c8d0b5c3fb2ba39a8db3a2aa8c963ac2ce548b1
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
         __metadata("design:type", Object)
     ], SharedComponent.prototype, "imageInput", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Object)
+    ], SharedComponent.prototype, "detailInput", void 0);
     SharedComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-shared',
@@ -827,11 +746,7 @@ var SharedComponent = /** @class */ (function () {
             styles: [__webpack_require__(/*! ./shared.component.css */ "./src/app/components/shared/shared.component.css")]
         }),
         __metadata("design:paramtypes", [ngx_facebook__WEBPACK_IMPORTED_MODULE_1__["FacebookService"],
-<<<<<<< HEAD
-            ngx_spinner__WEBPACK_IMPORTED_MODULE_3__["NgxSpinnerService"]])
-=======
             ngx_spinner__WEBPACK_IMPORTED_MODULE_2__["NgxSpinnerService"]])
->>>>>>> 8c8d0b5c3fb2ba39a8db3a2aa8c963ac2ce548b1
     ], SharedComponent);
     return SharedComponent;
 }());
@@ -840,8 +755,6 @@ var SharedComponent = /** @class */ (function () {
 
 /***/ }),
 
-<<<<<<< HEAD
-=======
 /***/ "./src/app/components/toolbar/toolbar.component.html":
 /*!***********************************************************!*\
   !*** ./src/app/components/toolbar/toolbar.component.html ***!
@@ -976,7 +889,6 @@ var ToolbarComponent = /** @class */ (function () {
 
 /***/ }),
 
->>>>>>> 8c8d0b5c3fb2ba39a8db3a2aa8c963ac2ce548b1
 /***/ "./src/app/page/home/home.component.css":
 /*!**********************************************!*\
   !*** ./src/app/page/home/home.component.css ***!
@@ -1178,18 +1090,11 @@ module.exports = "<div class=\"row container pl-0 pr-0 ml-0 mr-0\">\r\n    <div 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginComponent", function() { return LoginComponent; });
-<<<<<<< HEAD
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var angularx_social_login__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! angularx-social-login */ "./node_modules/angularx-social-login/angularx-social-login.es5.js");
-/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
-=======
 /* harmony import */ var _services_service_api_service_api_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../services/service-api/service-api.service */ "./src/app/services/service-api/service-api.service.ts");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var angularx_social_login__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! angularx-social-login */ "./node_modules/angularx-social-login/angularx-social-login.es5.js");
 /* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
->>>>>>> 8c8d0b5c3fb2ba39a8db3a2aa8c963ac2ce548b1
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1204,16 +1109,6 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-<<<<<<< HEAD
-var LoginComponent = /** @class */ (function () {
-    function LoginComponent(authService, route, spinner) {
-        this.authService = authService;
-        this.route = route;
-        this.spinner = spinner;
-    }
-    LoginComponent.prototype.signInWithFB = function () {
-        this.authService.signIn(angularx_social_login__WEBPACK_IMPORTED_MODULE_2__["FacebookLoginProvider"].PROVIDER_ID);
-=======
 
 var LoginComponent = /** @class */ (function () {
     function LoginComponent(authService, route, spinner, seviceApi) {
@@ -1224,7 +1119,6 @@ var LoginComponent = /** @class */ (function () {
     }
     LoginComponent.prototype.signInWithFB = function () {
         this.authService.signIn(angularx_social_login__WEBPACK_IMPORTED_MODULE_3__["FacebookLoginProvider"].PROVIDER_ID);
->>>>>>> 8c8d0b5c3fb2ba39a8db3a2aa8c963ac2ce548b1
     };
     LoginComponent.prototype.ngOnInit = function () {
     };
@@ -1236,22 +1130,17 @@ var LoginComponent = /** @class */ (function () {
             _this.user.photoUrl = "https://graph.facebook.com/" + _this.user.id + "/picture?width=2000&height=2000";
             window.localStorage.setItem('@user', JSON.stringify(_this.user));
             _this.loggedIn = (user != null);
-            _this.route.navigate(['home']);
+            _this.route.navigate(['select-product']);
         });
-<<<<<<< HEAD
-    };
-    LoginComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-=======
-        this.saveUser();
+        // this.saveUser();
     };
     LoginComponent.prototype.saveUser = function () {
         try {
             var dataUser = JSON.parse(window.localStorage.getItem('@user'));
             console.log(dataUser);
             var data = {
-                username: dataUser.email ? dataUser.email : dataUser.firstName + dataUser.lastName,
-                password: 'P@ssw0rd'
+                username: 'admin',
+                password: 'P@ssw'
             };
             var user = this.seviceApi.saveUser(data);
             console.log('login' + user);
@@ -1259,11 +1148,11 @@ var LoginComponent = /** @class */ (function () {
             if (!user) {
                 console.log('regis');
                 var dataRegis = {
-                    username: dataUser.email ? dataUser.email : dataUser.firstName + dataUser.lastName,
+                    username: "boom",
                     password: 'P@ssw0rd',
-                    firstname: dataUser.firstName,
-                    lastname: dataUser.lastName,
-                    email: dataUser.email ? dataUser.email : dataUser.firstName + dataUser.lastName + '@hotmail.com'
+                    firstname: 'boom',
+                    lastname: 'jaidee',
+                    email: 'boom@hotmail.com'
                 };
                 var res = this.seviceApi.sigup(dataRegis);
                 console.log('resiter' + res);
@@ -1275,21 +1164,14 @@ var LoginComponent = /** @class */ (function () {
     };
     LoginComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
->>>>>>> 8c8d0b5c3fb2ba39a8db3a2aa8c963ac2ce548b1
             selector: 'app-login',
             template: __webpack_require__(/*! ./login.component.html */ "./src/app/page/login/login.component.html"),
             styles: [__webpack_require__(/*! ./login.component.css */ "./src/app/page/login/login.component.css")]
         }),
-<<<<<<< HEAD
-        __metadata("design:paramtypes", [angularx_social_login__WEBPACK_IMPORTED_MODULE_2__["AuthService"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
-            ngx_spinner__WEBPACK_IMPORTED_MODULE_3__["NgxSpinnerService"]])
-=======
         __metadata("design:paramtypes", [angularx_social_login__WEBPACK_IMPORTED_MODULE_3__["AuthService"],
             _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
             ngx_spinner__WEBPACK_IMPORTED_MODULE_4__["NgxSpinnerService"],
             _services_service_api_service_api_service__WEBPACK_IMPORTED_MODULE_0__["ServiceApiService"]])
->>>>>>> 8c8d0b5c3fb2ba39a8db3a2aa8c963ac2ce548b1
     ], LoginComponent);
     return LoginComponent;
 }());
@@ -1298,8 +1180,6 @@ var LoginComponent = /** @class */ (function () {
 
 /***/ }),
 
-<<<<<<< HEAD
-=======
 /***/ "./src/app/page/product-detail/product-detail.component.css":
 /*!******************************************************************!*\
   !*** ./src/app/page/product-detail/product-detail.component.css ***!
@@ -1307,7 +1187,7 @@ var LoginComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".center{\r\n    text-align: center;\r\n}\r\n\r\n.size-image{\r\n    width: 65%;\r\n    height: 30vw;\r\n    -o-object-fit: cover;\r\n       object-fit: cover;\r\n}\r\n\r\n.font-header{\r\n    font-size: 3vw\r\n}\r\n\r\n.border-image{\r\n    border: solid 1px #e2e2e2;\r\n    border-radius: 2%\r\n}\r\n\r\n.full-width {\r\n    width: 100%;\r\n}\r\n\r\n.height-input {\r\n    height: 15vw;\r\n}\r\n\r\n.word-wrap {\r\n    word-wrap: break-word;\r\n}\r\n\r\n.scroll-detail {\r\n    overflow: auto;\r\n}"
+module.exports = ".center{\r\n    text-align: center;\r\n}\r\n\r\n.size-image{\r\n    width: 65%;\r\n    height: 30vw;\r\n    -o-object-fit: cover;\r\n       object-fit: cover;\r\n}\r\n\r\n.font-header{\r\n    font-size: 3vw\r\n}\r\n\r\n.border-image{\r\n    border: solid 1px #e2e2e2;\r\n    border-radius: 2%\r\n}\r\n\r\n.full-width {\r\n    width: 100%;\r\n}\r\n\r\n.height-input {\r\n    height: 15vw;\r\n}\r\n\r\n.word-wrap {\r\n    word-wrap: break-word;\r\n}\r\n\r\n.scroll-detail {\r\n    overflow: auto;\r\n}\r\n\r\n.font-detail {\r\n    font-size: 13px;\r\n}\r\n\r\n.color-title {\r\n    color: hotpink;\r\n}"
 
 /***/ }),
 
@@ -1318,7 +1198,7 @@ module.exports = ".center{\r\n    text-align: center;\r\n}\r\n\r\n.size-image{\r
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n  <div class=\"col-2\"></div>\r\n  <div class=\"col-8\">\r\n      <p>\r\n          <span class=\"mr-2 font-header\">my</span>\r\n          <span class=\"mr-2 font-header\">Lips</span>\r\n          <span class=\"mr-2 font-header\">my</span>\r\n          <span class=\"mr-2 font-header\">Life</span>\r\n      </p>\r\n  </div>\r\n  <div class=\"col-2\"></div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-2\"></div>\r\n  <div class=\"col-8 center\">\r\n      <img class=\"size-image border-image\" src=\"https://img.wongnai.com/p/1920x0/2018/03/23/dd46cee3da9b49ffa1b3213adf3c9746.jpg\">\r\n  </div>\r\n  <div class=\"col-2\"></div>\r\n</div>\r\n\r\n<div class=\"row mt-4\">\r\n  <div class=\"col-2\"></div>\r\n  <div class=\"col-8\">\r\n      <div class=\"full-width border-image scroll-detail word-wrap height-input pr-4 pl-4\">\r\n          <p>รายละเอียด:</p>\r\n          <p>\r\n              ฟหกฟหกฟหกสาฟวหกฟวหสกาฟวสหากฟวสหากฟวสหากฟวสหากวฟสาหกฟสวหากวสฟหากวฟสหาก\r\n              ฟหกฟหกฟหกสาฟวหกฟวหสกาฟวสหากฟวสหากฟวสหากฟวสหากวฟสาหกฟสวหากวสฟหากวฟสหาก\r\n              ฟหกฟหกฟหกสาฟวหกฟวหสกาฟวสหากฟวสหากฟวสหากฟวสหากวฟสาหกฟสวหากวสฟหากวฟสหาก\r\n              ฟหกฟหกฟหกสาฟวหกฟวหสกาฟวสหากฟวสหากฟวสหากฟวสหากวฟสาหกฟสวหากวสฟหากวฟสหาก\r\n              ฟหกฟหกฟหกสาฟวหกฟวหสกาฟวสหากฟวสหากฟวสหากฟวสหากวฟสาหกฟสวหากวสฟหากวฟสหาก\r\n              ฟหกฟหกฟหกสาฟวหกฟวหสกาฟวสหากฟวสหากฟวสหากฟวสหากวฟสาหกฟสวหากวสฟหากวฟสหาก\r\n          </p>\r\n      </div>\r\n  </div>\r\n  <div class=\"col-2\"></div>\r\n</div>\r\n\r\n\r\n<!-- <app-shared-component></app-shared-component> -->"
+module.exports = "<div class=\"row\">\r\n    <div class=\"col-2\"></div>\r\n    <div class=\"col-8\">\r\n        <p>\r\n            <span class=\"mr-2 font-header\">my</span>\r\n            <span class=\"mr-2 font-header\">Lips</span>\r\n            <span class=\"mr-2 font-header\">my</span>\r\n            <span class=\"mr-2 font-header\">Life</span>\r\n        </p>\r\n    </div>\r\n    <div class=\"col-2\"></div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-2\"></div>\r\n  <div class=\"col-8 center\" *ngIf=\"productDetail\">\r\n      <img class=\"size-image border-image\" [src]=\"productDetail.productcolor\">\r\n  </div>\r\n  <div class=\"col-2\"></div>\r\n</div>\r\n\r\n<div class=\"row mt-4\">\r\n  <div class=\"col-0 col-sm-0 col-md-1 col-lg-2\"></div>\r\n  <div class=\"col-12 col-sm-12 col-md-10 col-lg-8\" *ngIf=\"productDetail\">\r\n      <div class=\"full-width border-image scroll-detail word-wrap height-input pr-4 pl-4\">\r\n          <p>รายละเอียด:</p>\r\n          <h4 class=\"color-title\">{{productDetail.titledetail}}</h4>\r\n          <p class=\"font-detail\">\r\n              {{productDetail.detail}}\r\n          </p>\r\n      </div>\r\n  </div>\r\n  <div class=\"col-0 col-sm-0 col-md-1 col-lg-2\"></div>\r\n</div>\r\n \r\n\r\n<app-shared *ngIf=\"productDetail && productDetail.productcolor && productDetail.detail\" [detailInput]=\"productDetail.detail\" [imageInput]=\"productDetail.productcolor\"></app-shared>"
 
 /***/ }),
 
@@ -1333,6 +1213,8 @@ module.exports = "<div class=\"row\">\r\n  <div class=\"col-2\"></div>\r\n  <div
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProductDetailComponent", function() { return ProductDetailComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_app_services_service_api_service_api_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/services/service-api/service-api.service */ "./src/app/services/service-api/service-api.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1342,11 +1224,75 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (undefined && undefined.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
 
 var ProductDetailComponent = /** @class */ (function () {
-    function ProductDetailComponent() {
+    function ProductDetailComponent(serviceApi, activatedRoute) {
+        this.serviceApi = serviceApi;
+        this.activatedRoute = activatedRoute;
     }
     ProductDetailComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.activatedRoute
+            .queryParams
+            .subscribe(function (params) {
+            if (params['id']) {
+                _this.itemId = params['id'];
+                _this.getProductDerail(_this.itemId);
+            }
+        });
+    };
+    ProductDetailComponent.prototype.getProductDerail = function (id) {
+        return __awaiter(this, void 0, void 0, function () {
+            var res;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.serviceApi.getProdById(id)];
+                    case 1:
+                        res = _a.sent();
+                        // console.log(res)
+                        this.productDetail = res.data;
+                        console.log(this.productDetail);
+                        return [2 /*return*/];
+                }
+            });
+        });
     };
     ProductDetailComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -1354,7 +1300,8 @@ var ProductDetailComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./product-detail.component.html */ "./src/app/page/product-detail/product-detail.component.html"),
             styles: [__webpack_require__(/*! ./product-detail.component.css */ "./src/app/page/product-detail/product-detail.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [src_app_services_service_api_service_api_service__WEBPACK_IMPORTED_MODULE_1__["ServiceApiService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]])
     ], ProductDetailComponent);
     return ProductDetailComponent;
 }());
@@ -1370,7 +1317,7 @@ var ProductDetailComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".font-header{\r\n    font-size: 3vw;\r\n    font-family: 'segoe_print', 'arial', sans-serif;\r\n}\r\n\r\n@font-face {\r\n    font-family: segoe_print;\r\n    src: url('segoe_print.ttf') format(\"opentype\");\r\n}\r\n\r\n.size-image{\r\n    width: 47%;\r\n    height: 20vw;\r\n    -o-object-fit: cover;\r\n       object-fit: cover;\r\n}\r\n\r\n.margin-image {\r\n    margin-right: 10px;\r\n    margin-left: 10px;\r\n    margin-top: 8px;\r\n    margin-bottom: 8px;\r\n}\r\n\r\n.text-center {\r\n    text-align: center;\r\n}\r\n\r\n.border-image{\r\n    border: solid 1px #e2e2e2;\r\n    border-radius: 2%\r\n}\r\n\r\n.full-width{\r\n    width: 100%;\r\n}\r\n\r\n.color-font {\r\n    color: #d60045;\r\n}\r\n\r\n\r\n\r\n"
+module.exports = ".font-header{\r\n    font-size: 3vw;\r\n    font-family: 'segoe_print', 'arial', sans-serif;\r\n}\r\n\r\n@font-face {\r\n    font-family: segoe_print;\r\n    src: url('segoe_print.ttf') format(\"opentype\");\r\n}\r\n\r\n.size-image{\r\n    width: 40%;\r\n    height: 20vw;\r\n    -o-object-fit: cover;\r\n       object-fit: cover;\r\n}\r\n\r\n.margin-image {\r\n    margin-right: 5px;\r\n    margin-left: 5px;\r\n    margin-top: 5px;\r\n    margin-bottom: 5px;\r\n}\r\n\r\n.text-center {\r\n    text-align: center;\r\n}\r\n\r\n.border-image{\r\n    border: solid 1px #e2e2e2;\r\n    border-radius: 2%\r\n}\r\n\r\n.full-width{\r\n    width: 100%;\r\n}\r\n\r\n.color-font {\r\n    color: #d60045;\r\n}\r\n\r\n\r\n\r\n"
 
 /***/ }),
 
@@ -1381,7 +1328,7 @@ module.exports = ".font-header{\r\n    font-size: 3vw;\r\n    font-family: 'sego
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n  <div class=\"col-2\"></div>\r\n  <div class=\"col-8\">\r\n    <p>\r\n      <span class=\"mr-2 font-header\">my</span>\r\n      <span class=\"mr-2 font-header color-font\">Lips</span>\r\n      <span class=\"mr-2 font-header\">my</span>\r\n      <span class=\"mr-2 font-header color-font\">Life</span>\r\n    </p>\r\n  </div>\r\n  <div class=\"col-2\"></div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-2\"></div>\r\n  <div class=\"col-8\">\r\n    <div style=\"display: inline\" *ngFor=\"let item of data\">\r\n      <img class=\"size-image margin-image border-image\" [src]=\"item.color\" alt=\"color\" (click)=\"openProductDetail(item)\">\r\n    </div>\r\n  </div>\r\n  <div class=\"col-2\"></div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-2\"></div>\r\n  <div class=\"col-8\">\r\n    <img class=\"border-image full-width\" src=\"https://res.cloudinary.com/dyiuidzsc/image/upload/v1548991563/Rabu%20Rabu/perfect%20lips/project.jpg\"\r\n      alt=\"\">\r\n  </div>\r\n  <div class=\"col-2\"></div>\r\n</div>"
+module.exports = "<div class=\"row\">\r\n  <div class=\"col-2\"></div>\r\n  <div class=\"col-8\">\r\n    <p>\r\n      <span class=\"mr-2 font-header\">my</span>\r\n      <span class=\"mr-2 font-header color-font\">Lips</span>\r\n      <span class=\"mr-2 font-header\">my</span>\r\n      <span class=\"mr-2 font-header color-font\">Life</span>\r\n    </p>\r\n  </div>\r\n  <div class=\"col-2\"></div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-2\"></div>\r\n  <div class=\"col-8 col-sm-8 col-md-8\">\r\n    <div class=\"text-center\">\r\n      <div style=\"display: inline\" *ngFor=\"let item of data\">\r\n        <img class=\"size-image margin-image border-image\" [src]=\"item.color\" alt=\"color\" (click)=\"openProductDetail(item)\">\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"col-2\"></div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-2\"></div>\r\n  <div class=\"col-8\">\r\n    <img class=\"border-image full-width\" src=\"https://res.cloudinary.com/dyiuidzsc/image/upload/v1548991563/Rabu%20Rabu/perfect%20lips/project.jpg\"\r\n      alt=\"\">\r\n  </div>\r\n  <div class=\"col-2\"></div>\r\n</div>"
 
 /***/ }),
 
@@ -1446,8 +1393,8 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 
 
 var SelectedProductComponent = /** @class */ (function () {
-    function SelectedProductComponent(seviceApi, router) {
-        this.seviceApi = seviceApi;
+    function SelectedProductComponent(serviceApi, router) {
+        this.serviceApi = serviceApi;
         this.router = router;
     }
     SelectedProductComponent.prototype.ngOnInit = function () {
@@ -1458,7 +1405,7 @@ var SelectedProductComponent = /** @class */ (function () {
             var res;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.seviceApi.getProd()];
+                    case 0: return [4 /*yield*/, this.serviceApi.getProd()];
                     case 1:
                         res = _a.sent();
                         this.data = res.data;
@@ -1498,8 +1445,7 @@ var SelectedProductComponent = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ServiceApiService", function() { return ServiceApiService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/environments/environment */ "./src/environments/environment.ts");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1511,33 +1457,32 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
-
 var ServiceApiService = /** @class */ (function () {
     function ServiceApiService(http) {
         this.http = http;
     }
     ServiceApiService.prototype.authorizationHeader = function () {
         // console.log(token);
-        var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({ 'Content-Type': 'application/json; charset=utf-8' });
+        var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({ 'Content-Type': 'application/json; charset=utf-8' });
         return headers;
     };
     ServiceApiService.prototype.saveUser = function (body) {
-        return this.http.post('http://13.250.121.197/api/auth/signin', body, { headers: this.authorizationHeader() }).toPromise();
+        return this.http.post('https://rabu-authen.herokuapp.com/api/auth/signin', body, { headers: this.authorizationHeader() }).toPromise();
     };
     ServiceApiService.prototype.sigup = function (body) {
-        return this.http.post('http://13.250.121.197/api/auth/signup', body, { headers: this.authorizationHeader() }).toPromise();
+        return this.http.post('https://rabu-authen.herokuapp.com/api/auth/signup', body, { headers: this.authorizationHeader() }).toPromise();
     };
     ServiceApiService.prototype.getProd = function () {
-        return this.http.get(src_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].apiUrl + '/api/productsrabu').toPromise();
+        return this.http.get('https://rabu-product-service.herokuapp.com/api/productsrabu').toPromise();
     };
     ServiceApiService.prototype.getProdById = function (_id) {
-        return this.http.get(src_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].apiUrl + '/api/productsrabu/' + _id).toPromise();
+        return this.http.get('https://rabu-product-service.herokuapp.com/api/productsrabu/' + _id).toPromise();
     };
     ServiceApiService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
         }),
-        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
     ], ServiceApiService);
     return ServiceApiService;
 }());
@@ -1546,7 +1491,6 @@ var ServiceApiService = /** @class */ (function () {
 
 /***/ }),
 
->>>>>>> 8c8d0b5c3fb2ba39a8db3a2aa8c963ac2ce548b1
 /***/ "./src/environments/environment.ts":
 /*!*****************************************!*\
   !*** ./src/environments/environment.ts ***!
@@ -1561,14 +1505,10 @@ __webpack_require__.r(__webpack_exports__);
 // `ng build ---prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 var environment = {
-<<<<<<< HEAD
-    production: false
-=======
     production: false,
     environment: "dev",
     appName: "raburabulovelove-web",
     apiUrl: "http://13.250.121.197"
->>>>>>> 8c8d0b5c3fb2ba39a8db3a2aa8c963ac2ce548b1
 };
 /*
  * In development mode, for easier debugging, you can ignore zone related error
@@ -1617,11 +1557,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
 module.exports = __webpack_require__(/*! D:\html\robu-web\src\main.ts */"./src/main.ts");
-=======
-module.exports = __webpack_require__(/*! D:\rabu\web\robu-web\src\main.ts */"./src/main.ts");
->>>>>>> 8c8d0b5c3fb2ba39a8db3a2aa8c963ac2ce548b1
 
 
 /***/ })

@@ -662,17 +662,10 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
 __webpack_require__(/*! D:\html\robu-web\node_modules\@angular\material\prebuilt-themes\indigo-pink.css */"./node_modules/@angular/material/prebuilt-themes/indigo-pink.css");
 __webpack_require__(/*! D:\html\robu-web\src\styles.scss */"./src/styles.scss");
 __webpack_require__(/*! D:\html\robu-web\node_modules\bootstrap\dist\css\bootstrap-reboot.css */"./node_modules/bootstrap/dist/css/bootstrap-reboot.css");
 module.exports = __webpack_require__(/*! D:\html\robu-web\node_modules\bootstrap\dist\css\bootstrap-grid.css */"./node_modules/bootstrap/dist/css/bootstrap-grid.css");
-=======
-__webpack_require__(/*! D:\rabu\web\robu-web\node_modules\@angular\material\prebuilt-themes\indigo-pink.css */"./node_modules/@angular/material/prebuilt-themes/indigo-pink.css");
-__webpack_require__(/*! D:\rabu\web\robu-web\src\styles.scss */"./src/styles.scss");
-__webpack_require__(/*! D:\rabu\web\robu-web\node_modules\bootstrap\dist\css\bootstrap-reboot.css */"./node_modules/bootstrap/dist/css/bootstrap-reboot.css");
-module.exports = __webpack_require__(/*! D:\rabu\web\robu-web\node_modules\bootstrap\dist\css\bootstrap-grid.css */"./node_modules/bootstrap/dist/css/bootstrap-grid.css");
->>>>>>> 8c8d0b5c3fb2ba39a8db3a2aa8c963ac2ce548b1
 
 
 /***/ })
