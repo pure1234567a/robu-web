@@ -67,16 +67,14 @@ export class LoginComponent implements OnInit {
         }
       }
 
-      let res: any = this.seviceApi.sigup(dataRegis).then((res)=>{
-        console.log('res register : ',res)
-        this.route.navigate(['select-product']);
-      }).catch((err)=>{
-        console.log(err)
-      })
-
+      let res: any = this.seviceApi.sigup(dataRegis)
+      this.route.navigate(['select-product']);
       console.log('resiter' + res)
     } catch (error) {
       console.log('error ' + error)
+      if (error.message ==="Email already exists" || error.message ==="Username already exists") {
+        this.route.navigate(['select-product']);
+      }
     }
   }
 }

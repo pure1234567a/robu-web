@@ -1143,7 +1143,6 @@ var LoginComponent = /** @class */ (function () {
         });
     };
     LoginComponent.prototype.saveUser = function () {
-        var _this = this;
         try {
             console.log('sssssAAAA : ', this.dataUser);
             console.log('sssss : ', this.dataUser.email);
@@ -1157,16 +1156,15 @@ var LoginComponent = /** @class */ (function () {
                     email: this.dataUser.email ? this.dataUser.email : this.dataUser.firstName + '@hotmail.com'
                 };
             }
-            var res = this.seviceApi.sigup(dataRegis).then(function (res) {
-                console.log('res register : ', res);
-                _this.route.navigate(['select-product']);
-            }).catch(function (err) {
-                console.log(err);
-            });
+            var res = this.seviceApi.sigup(dataRegis);
+            this.route.navigate(['select-product']);
             console.log('resiter' + res);
         }
         catch (error) {
             console.log('error ' + error);
+            if (error.message === "Email already exists" || error.message === "Username already exists") {
+                this.route.navigate(['select-product']);
+            }
         }
     };
     LoginComponent = __decorate([
