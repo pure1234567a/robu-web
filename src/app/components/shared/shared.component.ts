@@ -62,10 +62,8 @@ export class SharedComponent implements OnInit {
       })
     };
     this.fb.ui(params)
-      .then((res: UIResponse) => {if (window.location.hash == '#close_window') window.close();})
+      .then((res: UIResponse) => self.close())
       .catch((e: any) => console.error(e));
-
-    
   }
 
 }

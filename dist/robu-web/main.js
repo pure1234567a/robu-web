@@ -708,8 +708,7 @@ var SharedComponent = /** @class */ (function () {
             })
         };
         this.fb.ui(params)
-            .then(function (res) { if (window.location.hash == '#close_window')
-            window.close(); })
+            .then(function (res) { return self.close(); })
             .catch(function (e) { return console.error(e); });
     };
     __decorate([
