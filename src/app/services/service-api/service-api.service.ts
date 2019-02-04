@@ -27,11 +27,11 @@ export class ServiceApiService {
   }
 
   getProd() {
-    return this.http.get(environment.apiUrl + '/api/productsrabu').toPromise()
+    return this.http.get('https://rabu-product-service.herokuapp.com/api/productsrabu').toPromise()
   }
 
   getProdById(_id) {
-    return this.http.get(environment.apiUrl + '/api/productsrabu/' + _id).toPromise()
+    return this.http.get('https://rabu-product-service.herokuapp.com/api/productsrabu/' + _id).toPromise()
   }
 
 
