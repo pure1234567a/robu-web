@@ -32,6 +32,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.dataUser = JSON.parse(window.localStorage.getItem('@user'));
+    console.log("Datauser:", this.dataUser);
     if (this.dataUser) {
       this.route.navigate(['select-product']);
     }
