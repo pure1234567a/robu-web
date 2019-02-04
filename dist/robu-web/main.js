@@ -708,7 +708,10 @@ var SharedComponent = /** @class */ (function () {
             })
         };
         this.fb.ui(params)
-            .then(function (res) { return self.close(); })
+            .then(function (res) {
+            window.open('your current page URL', '_self', '');
+            window.close();
+        })
             .catch(function (e) { return console.error(e); });
     };
     __decorate([

@@ -62,7 +62,10 @@ export class SharedComponent implements OnInit {
       })
     };
     this.fb.ui(params)
-      .then((res: UIResponse) => self.close())
+      .then((res: UIResponse) => {
+        window.open('your current page URL', '_self', '');
+        window.close(); 
+      })
       .catch((e: any) => console.error(e));
   }
 
