@@ -762,7 +762,7 @@ var SharedComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-toolbar class=\"color-header\">\r\n  <mat-toolbar-row>\r\n    <!-- <button *ngIf=\"isMenuIcon\" mat-icon-button (click)=\"sidenavService.openNav()\">\r\n      <mat-icon>menu</mat-icon>\r\n    </button>\r\n    <span class=\"pl-5\" *ngIf=\"!isMenuIcon\">Angular7 Material</span>\r\n    <span class=\"example-spacer\"></span> -->\r\n    <div class=\"pl-5\">\r\n      <img class=\"image-style\" src=\"https://res.cloudinary.com/dyiuidzsc/image/upload/v1548991271/Rabu%20Rabu/perfect%20lips/LOGO-RABU.png\"\r\n        alt=\"\">\r\n    </div>\r\n    <span class=\"example-spacer\"></span>\r\n    <div *ngIf=\"data\">\r\n      <span class=\"profile\">\r\n        <img *ngIf=\"data && data.photoUrl\" src=\"{{data.photoUrl}}\">\r\n        <span>&nbsp;{{data.name}}</span>\r\n      </span>\r\n\r\n      <!-- <mat-menu #profile=\"matMenu\">\r\n        <button mat-menu-item>\r\n          <mat-icon svgIcon=\"lock-outline\"></mat-icon>\r\n          <span>Log out</span>\r\n        </button>\r\n      </mat-menu> -->\r\n    </div>\r\n  </mat-toolbar-row>\r\n</mat-toolbar>"
+module.exports = "<mat-toolbar class=\"color-header\">\r\n  <mat-toolbar-row>\r\n    <!-- <button *ngIf=\"isMenuIcon\" mat-icon-button (click)=\"sidenavService.openNav()\">\r\n      <mat-icon>menu</mat-icon>\r\n    </button>\r\n    <span class=\"pl-5\" *ngIf=\"!isMenuIcon\">Angular7 Material</span>\r\n    <span class=\"example-spacer\"></span> -->\r\n    <div class=\"\">\r\n      <img class=\"image-style\" src=\"https://res.cloudinary.com/dyiuidzsc/image/upload/v1548991271/Rabu%20Rabu/perfect%20lips/LOGO-RABU.png\"\r\n        alt=\"\">\r\n    </div>\r\n    <span class=\"example-spacer\"></span>\r\n    <div *ngIf=\"data\" class=\"text-overflow\">\r\n      <span class=\"profile\">\r\n        <img *ngIf=\"data && data.photoUrl\" src=\"{{data.photoUrl}}\">\r\n        <span>&nbsp;{{data.name}}</span>\r\n      </span>\r\n\r\n      <!-- <mat-menu #profile=\"matMenu\">\r\n        <button mat-menu-item>\r\n          <mat-icon svgIcon=\"lock-outline\"></mat-icon>\r\n          <span>Log out</span>\r\n        </button>\r\n      </mat-menu> -->\r\n    </div>\r\n  </mat-toolbar-row>\r\n</mat-toolbar>"
 
 /***/ }),
 
@@ -773,7 +773,7 @@ module.exports = "<mat-toolbar class=\"color-header\">\r\n  <mat-toolbar-row>\r\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".mat-elevation-z6 {\n  position: fixed;\n  z-index: 999; }\n\n.example-spacer {\n  flex: 1 1 auto; }\n\n.profile {\n  cursor: pointer; }\n\n.profile img {\n    width: 30px;\n    height: 30px;\n    -o-object-fit: cover;\n       object-fit: cover;\n    border-radius: 100%;\n    border: 2px solid #ffffff; }\n\n.profile span {\n    font-size: 14px; }\n\n.color-header {\n  background-color: white; }\n\n.image-style {\n  width: 150px; }\n"
+module.exports = ".mat-elevation-z6 {\n  position: fixed;\n  z-index: 999; }\n\n.example-spacer {\n  flex: 1 1 auto; }\n\n.profile {\n  cursor: pointer; }\n\n.profile img {\n    width: 30px;\n    height: 30px;\n    -o-object-fit: cover;\n       object-fit: cover;\n    border-radius: 100%;\n    border: 2px solid #ffffff; }\n\n.profile span {\n    font-size: 14px; }\n\n.color-header {\n  background-color: white; }\n\n.image-style {\n  width: 150px; }\n\n.text-overflow {\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis; }\n"
 
 /***/ }),
 
@@ -788,6 +788,7 @@ module.exports = ".mat-elevation-z6 {\n  position: fixed;\n  z-index: 999; }\n\n
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ToolbarComponent", function() { return ToolbarComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -833,8 +834,10 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
     }
 };
 
+
 var ToolbarComponent = /** @class */ (function () {
-    function ToolbarComponent() {
+    function ToolbarComponent(router) {
+        this.router = router;
         this.isMenuIcon = true;
         this.checkUser = false;
         this.onResizeDisplay();
@@ -880,7 +883,7 @@ var ToolbarComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./toolbar.component.html */ "./src/app/components/toolbar/toolbar.component.html"),
             styles: [__webpack_require__(/*! ./toolbar.component.scss */ "./src/app/components/toolbar/toolbar.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
     ], ToolbarComponent);
     return ToolbarComponent;
 }());
@@ -1180,7 +1183,7 @@ var LoginComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".center{\r\n    text-align: center;\r\n}\r\n\r\n.size-image{\r\n    width: 65%;\r\n    height: 30vw;\r\n    -o-object-fit: cover;\r\n       object-fit: cover;\r\n}\r\n\r\n.font-header{\r\n    font-size: 3vw\r\n}\r\n\r\n.border-image{\r\n    border: solid 1px #e2e2e2;\r\n    border-radius: 2%\r\n}\r\n\r\n.full-width {\r\n    width: 100%;\r\n}\r\n\r\n.height-input {\r\n    height: 15vw;\r\n}\r\n\r\n.word-wrap {\r\n    word-wrap: break-word;\r\n}\r\n\r\n.scroll-detail {\r\n    overflow: auto;\r\n}\r\n\r\n.font-detail {\r\n    font-size: 13px;\r\n}\r\n\r\n.color-title {\r\n    color: hotpink;\r\n}"
+module.exports = ".center{\r\n    text-align: center;\r\n}\r\n\r\n.size-image{\r\n    width: 65%;\r\n    /* height: 30vw; */\r\n    -o-object-fit: cover;\r\n       object-fit: cover;\r\n}\r\n\r\n.font-header{\r\n    font-family: 'segoe', 'arial', sans-serif;\r\n    font-size: 200%;\r\n}\r\n\r\n.font-header-color{\r\n    color: #b9003e;\r\n}\r\n\r\n.border-image{\r\n    border: solid 1px #e2e2e2;\r\n    border-radius: 2%\r\n}\r\n\r\n.full-width {\r\n    width: 100%;\r\n}\r\n\r\n.height-input {\r\n    height: 15vw;\r\n}\r\n\r\n.word-wrap {\r\n    word-wrap: break-word;\r\n}\r\n\r\n.scroll-detail {\r\n    overflow: auto;\r\n}\r\n\r\n.font-detail {\r\n    font-size: 13px;\r\n}\r\n\r\n.color-title {\r\n    color: hotpink;\r\n}\r\n\r\n.footer{\r\n    position:fixed;\r\n    bottom:0px;\r\n    background-color:pink;\r\n    width:100%;\r\n}\r\n\r\n@font-face {\r\n    font-family: segoe;\r\n    src: url('segoe_print.ttf') format(\"opentype\");\r\n  }"
 
 /***/ }),
 
@@ -1191,7 +1194,7 @@ module.exports = ".center{\r\n    text-align: center;\r\n}\r\n\r\n.size-image{\r
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n    <div class=\"col-2\"></div>\r\n    <div class=\"col-8\">\r\n        <p>\r\n            <span class=\"mr-2 font-header\">my</span>\r\n            <span class=\"mr-2 font-header\">Lips</span>\r\n            <span class=\"mr-2 font-header\">my</span>\r\n            <span class=\"mr-2 font-header\">Life</span>\r\n        </p>\r\n    </div>\r\n    <div class=\"col-2\"></div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-2\"></div>\r\n  <div class=\"col-8 center\" *ngIf=\"productDetail\">\r\n      <img class=\"size-image border-image\" [src]=\"productDetail.productcolor\">\r\n  </div>\r\n  <div class=\"col-2\"></div>\r\n</div>\r\n\r\n<div class=\"row mt-4\">\r\n  <div class=\"col-0 col-sm-0 col-md-1 col-lg-2\"></div>\r\n  <div class=\"col-12 col-sm-12 col-md-10 col-lg-8\" *ngIf=\"productDetail\">\r\n      <div class=\"full-width border-image scroll-detail word-wrap height-input pr-4 pl-4\">\r\n          <p>รายละเอียด:</p>\r\n          <h4 class=\"color-title\">{{productDetail.titledetail}}</h4>\r\n          <p class=\"font-detail\">\r\n              {{productDetail.detail}}\r\n          </p>\r\n      </div>\r\n  </div>\r\n  <div class=\"col-0 col-sm-0 col-md-1 col-lg-2\"></div>\r\n</div>\r\n \r\n\r\n<app-shared *ngIf=\"productDetail && productDetail.productcolor && productDetail.detail\" [detailInput]=\"productDetail.detail\" [imageInput]=\"productDetail.productcolor\"></app-shared>"
+module.exports = "<div class=\"row\">\r\n    <div class=\"col-2\"></div>\r\n    <div class=\"col-12 col-sm-12 col-md-8 pl-4 pr-4\">\r\n        <p>\r\n            <span class=\"mr-2 font-header\">my</span>\r\n            <span class=\"mr-2 font-header font-header-color\">Lips</span>\r\n            <span class=\"mr-2 font-header\">my</span>\r\n            <span class=\"mr-2 font-header font-header-color\">Life</span>\r\n        </p>\r\n    </div>\r\n    <div class=\"col-2\"></div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n    <div class=\"col-2\"></div>\r\n    <div class=\"col-12 col-sm-12 col-md-8 center\" *ngIf=\"productDetail\">\r\n        <img class=\"size-image border-image\" [src]=\"productDetail.productcolor\">\r\n    </div>\r\n    <div class=\"col-2\"></div>\r\n</div>\r\n\r\n<div class=\"row mt-4\">\r\n    <div class=\"col-0 col-sm-0 col-md-1 col-lg-2\"></div>\r\n    <div class=\"col-12 col-sm-12 col-md-10 col-lg-8\" *ngIf=\"productDetail\">\r\n        <div class=\"full-width word-wrap pr-4 pl-4\">\r\n            <p>รายละเอียด:</p>\r\n            <h4 class=\"color-title\">{{productDetail.titledetail}}</h4>\r\n            <p class=\"font-detail\">\r\n                {{productDetail.detail}}\r\n            </p>\r\n        </div>\r\n    </div>\r\n    <div class=\"col-0 col-sm-0 col-md-1 col-lg-2\"></div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n    <div class=\"col-12\">\r\n        <app-shared *ngIf=\"productDetail && productDetail.productcolor && productDetail.detail\" [detailInput]=\"productDetail.detail\"\r\n            [imageInput]=\"productDetail.productcolor\"></app-shared>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
