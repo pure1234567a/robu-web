@@ -4,12 +4,17 @@
 
 .size-image{
     width: 65%;
-    height: 30vw;
+    /* height: 30vw; */
     object-fit: cover;
 }
 
 .font-header{
-    font-size: 3vw
+    font-family: 'segoe', 'arial', sans-serif;
+    font-size: 200%;
+}
+
+.font-header-color{
+    color: #b9003e;
 }
 
 .border-image{
@@ -40,3 +45,15 @@
 .color-title {
     color: hotpink;
 }
+
+.footer{
+    position:fixed;
+    bottom:0px;
+    background-color:pink;
+    width:100%;
+}
+
+@font-face {
+    font-family: segoe;
+    src: url('../../../assets/font/segoe_print.ttf') format("opentype");
+  }
