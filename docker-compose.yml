@@ -1,0 +1,10 @@
+version: '3'
+services:
+  web:
+    image: pure1234567a/raburabulovelove
+    ports: 
+      - "80:80"
+    deploy:
+      replicas: 1
+
+  
