@@ -30,4 +30,9 @@ export class SelectedProductComponent implements OnInit {
     this.router.navigate(['product-detail'], { queryParams: { id: item._id } })
   }
 
+  onCloseTab() {
+    console.log('a');
+    open('', '_self').close();
+  }
+
 }

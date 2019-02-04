@@ -9,8 +9,8 @@
 }
 
 .size-image{
-    width: 40%;
-    height: 20vw;
+    width: 45%;
+    /* height: 20vw; */
     object-fit: cover;
 }
 
