@@ -1125,6 +1125,7 @@ var LoginComponent = /** @class */ (function () {
     };
     LoginComponent.prototype.ngOnInit = function () {
         this.dataUser = JSON.parse(window.localStorage.getItem('@user'));
+        console.log("Datauser:", this.dataUser);
         if (this.dataUser) {
             this.route.navigate(['select-product']);
         }
