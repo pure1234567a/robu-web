@@ -1,37 +1,41 @@
 <div class="row">
     <div class="col-2"></div>
-    <div class="col-8">
+    <div class="col-12 col-sm-12 col-md-8 pl-4 pr-4">
         <p>
             <span class="mr-2 font-header">my</span>
-            <span class="mr-2 font-header">Lips</span>
+            <span class="mr-2 font-header font-header-color">Lips</span>
             <span class="mr-2 font-header">my</span>
-            <span class="mr-2 font-header">Life</span>
+            <span class="mr-2 font-header font-header-color">Life</span>
         </p>
     </div>
     <div class="col-2"></div>
 </div>
 
 <div class="row">
-  <div class="col-2"></div>
-  <div class="col-8 center" *ngIf="productDetail">
-      <img class="size-image border-image" [src]="productDetail.productcolor">
-  </div>
-  <div class="col-2"></div>
+    <div class="col-2"></div>
+    <div class="col-12 col-sm-12 col-md-8 center" *ngIf="productDetail">
+        <img class="size-image border-image" [src]="productDetail.productcolor">
+    </div>
+    <div class="col-2"></div>
 </div>
 
 <div class="row mt-4">
-  <div class="col-0 col-sm-0 col-md-1 col-lg-2"></div>
-  <div class="col-12 col-sm-12 col-md-10 col-lg-8" *ngIf="productDetail">
-      <div class="full-width border-image scroll-detail word-wrap height-input pr-4 pl-4">
-          <p>รายละเอียด:</p>
-          <h4 class="color-title">{{productDetail.titledetail}}</h4>
-          <p class="font-detail">
-              {{productDetail.detail}}
-          </p>
-      </div>
-  </div>
-  <div class="col-0 col-sm-0 col-md-1 col-lg-2"></div>
+    <div class="col-0 col-sm-0 col-md-1 col-lg-2"></div>
+    <div class="col-12 col-sm-12 col-md-10 col-lg-8" *ngIf="productDetail">
+        <div class="full-width word-wrap pr-4 pl-4">
+            <p>รายละเอียด:</p>
+            <h4 class="color-title">{{productDetail.titledetail}}</h4>
+            <p class="font-detail">
+                {{productDetail.detail}}
+            </p>
+        </div>
+    </div>
+    <div class="col-0 col-sm-0 col-md-1 col-lg-2"></div>
 </div>
- 
 
-<app-shared *ngIf="productDetail && productDetail.productcolor && productDetail.detail" [detailInput]="productDetail.detail" [imageInput]="productDetail.productcolor"></app-shared>
+<div class="row">
+    <div class="col-12">
+        <app-shared *ngIf="productDetail && productDetail.productcolor && productDetail.detail" [detailInput]="productDetail.detail"
+            [imageInput]="productDetail.productcolor"></app-shared>
+    </div>
+</div>

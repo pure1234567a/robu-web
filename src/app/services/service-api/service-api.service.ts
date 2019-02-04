@@ -18,20 +18,20 @@ export class ServiceApiService {
   }
 
   saveUser(body) {
-    return this.http.post('http://13.250.121.197/api/auth/signin', body, { headers: this.authorizationHeader() }).toPromise()
+    return this.http.post('https://rabu-authen.herokuapp.com/api/auth/signin', body, { headers: this.authorizationHeader() }).toPromise()
   }
 
   sigup(body) {
-    return this.http.post('http://13.250.121.197/api/auth/signup', body, { headers: this.authorizationHeader() }).toPromise()
+    return this.http.post('https://rabu-authen.herokuapp.com/api/auth/signup', body, { headers: this.authorizationHeader() }).toPromise()
 
   }
 
   getProd() {
-    return this.http.get(environment.apiUrl + '/api/productsrabu').toPromise()
+    return this.http.get('https://rabu-product-service.herokuapp.com/api/productsrabu',{ headers: this.authorizationHeader() }).toPromise()
   }
 
   getProdById(_id) {
-    return this.http.get(environment.apiUrl + '/api/productsrabu/' + _id).toPromise()
+    return this.http.get('https://rabu-product-service.herokuapp.com/api/productsrabu/' + _id,{ headers: this.authorizationHeader() }).toPromise()
   }
 
 

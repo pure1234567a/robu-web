@@ -1,4 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-toolbar',
@@ -14,8 +15,8 @@ export class ToolbarComponent implements OnInit {
 
   constructor
     (
-
-    ) {
+      private router: Router,
+  ) {
     this.onResizeDisplay();
   }
 

@@ -25,7 +25,7 @@ export class SharedComponent implements OnInit {
     private spinner: NgxSpinnerService
   ) {
     const initParams: InitParams = {
-      appId: '391466811398230',
+      appId: '2134431583284588',
       version: 'v3.2'
     };
 
