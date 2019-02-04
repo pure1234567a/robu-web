@@ -708,7 +708,11 @@ var SharedComponent = /** @class */ (function () {
             })
         };
         this.fb.ui(params)
-            .then(function (res) { return close(); })
+            .then(function (res) {
+            return setTimeout(function () {
+                close();
+            }, 2000);
+        })
             .catch(function (e) { return console.error(e); });
         // }).catch(err => {
         //   console.log(err)

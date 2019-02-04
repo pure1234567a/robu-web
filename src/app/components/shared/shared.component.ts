@@ -62,7 +62,11 @@ export class SharedComponent implements OnInit {
       })
     };
     this.fb.ui(params)
-      .then((res: UIResponse) => close())
+      .then((res: UIResponse) =>
+      setTimeout(() => {
+        close()
+      }, 2000)
+      )
       .catch((e: any) => console.error(e));
     // }).catch(err => {
     //   console.log(err)
