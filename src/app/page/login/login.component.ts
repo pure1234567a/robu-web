@@ -45,7 +45,6 @@ export class LoginComponent implements OnInit {
       this.user.photoUrl = "https://graph.facebook.com/" + this.user.id + "/picture?width=2000&height=2000"
       window.localStorage.setItem('@user', JSON.stringify(this.user));
       this.loggedIn = (user != null);
-      this.route.navigate(['select-product']);
     });
     this.saveUser();
   }
@@ -59,8 +58,10 @@ export class LoginComponent implements OnInit {
         lastname: this.dataUser.lastName,
         email: this.dataUser.email ? this.dataUser.email : this.dataUser.firstName + '@hotmail.com'
       }
+      console.log("ดาต้าที่ปั้น",dataRegis)
       let res: any = this.seviceApi.sigup(dataRegis)
       console.log('resiter' + res)
+      this.route.navigate(['select-product']);
     } catch (error) {
       console.log('error ' + error)
     }
