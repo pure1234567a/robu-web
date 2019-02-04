@@ -1126,7 +1126,6 @@ var LoginComponent = /** @class */ (function () {
     };
     LoginComponent.prototype.ngOnInit = function () {
         this.dataUser = JSON.parse(window.localStorage.getItem('@user'));
-        console.log("Datauser:", this.dataUser);
         if (this.dataUser) {
             this.route.navigate(['select-product']);
         }
@@ -1138,12 +1137,14 @@ var LoginComponent = /** @class */ (function () {
             _this.user = user;
             _this.user.photoUrl = "https://graph.facebook.com/" + _this.user.id + "/picture?width=2000&height=2000";
             window.localStorage.setItem('@user', JSON.stringify(_this.user));
+            _this.dataUser = JSON.parse(window.localStorage.getItem('@user'));
+            console.log("Datauser:", _this.dataUser);
             _this.saveUser();
-            _this.route.navigate(['select-product']);
             _this.loggedIn = (user != null);
         });
     };
     LoginComponent.prototype.saveUser = function () {
+        var _this = this;
         try {
             console.log('regis');
             console.log('sssssAAAA : ', this.dataUser);
@@ -1159,7 +1160,11 @@ var LoginComponent = /** @class */ (function () {
                 };
             }
             console.log("ดาต้าที่ปั้น", dataRegis);
-            var res = this.seviceApi.sigup(dataRegis);
+            var res = this.seviceApi.sigup(dataRegis).then(function (res) {
+                _this.route.navigate(['select-product']);
+            }).catch(function (err) {
+                console.log(err);
+            });
             console.log('resiter' + res);
         }
         catch (error) {

@@ -33,7 +33,6 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.dataUser = JSON.parse(window.localStorage.getItem('@user'));
-    console.log("Datauser:", this.dataUser);
     if (this.dataUser) {
       this.route.navigate(['select-product']);
     }
@@ -45,8 +44,10 @@ export class LoginComponent implements OnInit {
       this.user = user;
       this.user.photoUrl = "https://graph.facebook.com/" + this.user.id + "/picture?width=2000&height=2000"
       window.localStorage.setItem('@user', JSON.stringify(this.user));
+
+      this.dataUser = JSON.parse(window.localStorage.getItem('@user'));
+      console.log("Datauser:", this.dataUser);
       this.saveUser();
-      this.route.navigate(['select-product']);
       this.loggedIn = (user != null);
     });
 
@@ -68,7 +69,12 @@ export class LoginComponent implements OnInit {
       }
 
       console.log("ดาต้าที่ปั้น", dataRegis)
-      let res: any = this.seviceApi.sigup(dataRegis)
+      let res: any = this.seviceApi.sigup(dataRegis).then((res)=>{
+        this.route.navigate(['select-product']);
+      }).catch((err)=>{
+        console.log(err)
+      })
+
       console.log('resiter' + res)
     } catch (error) {
       console.log('error ' + error)
