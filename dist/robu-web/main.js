@@ -1138,7 +1138,6 @@ var LoginComponent = /** @class */ (function () {
             _this.user.photoUrl = "https://graph.facebook.com/" + _this.user.id + "/picture?width=2000&height=2000";
             window.localStorage.setItem('@user', JSON.stringify(_this.user));
             _this.loggedIn = (user != null);
-            _this.route.navigate(['select-product']);
         });
         this.saveUser();
     };
@@ -1152,8 +1151,10 @@ var LoginComponent = /** @class */ (function () {
                 lastname: this.dataUser.lastName,
                 email: this.dataUser.email ? this.dataUser.email : this.dataUser.firstName + '@hotmail.com'
             };
+            console.log("ดาต้าที่ปั้น", dataRegis);
             var res = this.seviceApi.sigup(dataRegis);
             console.log('resiter' + res);
+            this.route.navigate(['select-product']);
         }
         catch (error) {
             console.log('error ' + error);
