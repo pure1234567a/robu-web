@@ -1119,6 +1119,7 @@ var LoginComponent = /** @class */ (function () {
         this.route = route;
         this.spinner = spinner;
         this.seviceApi = seviceApi;
+        this.dataUser = JSON.parse(window.localStorage.getItem('@user'));
     }
     LoginComponent.prototype.signInWithFB = function () {
         this.authService.signIn(angularx_social_login__WEBPACK_IMPORTED_MODULE_3__["FacebookLoginProvider"].PROVIDER_ID);
@@ -1145,7 +1146,8 @@ var LoginComponent = /** @class */ (function () {
     LoginComponent.prototype.saveUser = function () {
         try {
             console.log('regis');
-            console.log(this.dataUser.email);
+            console.log('sssssAAAA : ', this.dataUser);
+            console.log('sssss : ', this.dataUser.email);
             var dataRegis;
             if (this.dataUser) {
                 dataRegis = {

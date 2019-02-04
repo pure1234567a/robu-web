@@ -24,6 +24,7 @@ export class LoginComponent implements OnInit {
     private spinner: NgxSpinnerService,
     private seviceApi: ServiceApiService
   ) {
+    this.dataUser = JSON.parse(window.localStorage.getItem('@user'));
   }
 
   signInWithFB(): void {
@@ -53,7 +54,8 @@ export class LoginComponent implements OnInit {
   saveUser() {
     try {
       console.log('regis');
-      console.log(this.dataUser.email)
+      console.log('sssssAAAA : ',this.dataUser)
+      console.log('sssss : ',this.dataUser.email)
       var dataRegis: any;
       if (this.dataUser) {
         dataRegis = {
