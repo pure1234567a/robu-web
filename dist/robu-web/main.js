@@ -1304,7 +1304,7 @@ var ProductDetailComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".font-header{\r\n    font-size: 3vw;\r\n    font-family: 'segoe_print', 'arial', sans-serif;\r\n}\r\n\r\n@font-face {\r\n    font-family: segoe_print;\r\n    src: url('segoe_print.ttf') format(\"opentype\");\r\n}\r\n\r\n.size-image{\r\n    width: 40%;\r\n    height: 20vw;\r\n    -o-object-fit: cover;\r\n       object-fit: cover;\r\n}\r\n\r\n.margin-image {\r\n    margin-right: 5px;\r\n    margin-left: 5px;\r\n    margin-top: 5px;\r\n    margin-bottom: 5px;\r\n}\r\n\r\n.text-center {\r\n    text-align: center;\r\n}\r\n\r\n.border-image{\r\n    border: solid 1px #e2e2e2;\r\n    border-radius: 2%\r\n}\r\n\r\n.full-width{\r\n    width: 100%;\r\n}\r\n\r\n.color-font {\r\n    color: #d60045;\r\n}\r\n\r\n\r\n\r\n"
+module.exports = ".font-header{\r\n    font-size: 200%;\r\n    font-family: 'segoe_print', 'arial', sans-serif;\r\n}\r\n\r\n@font-face {\r\n    font-family: segoe_print;\r\n    src: url('segoe_print.ttf') format(\"opentype\");\r\n}\r\n\r\n.size-image{\r\n    width: 45%;\r\n    /* height: 20vw; */\r\n    -o-object-fit: cover;\r\n       object-fit: cover;\r\n}\r\n\r\n.margin-image {\r\n    margin-right: 5px;\r\n    margin-left: 5px;\r\n    margin-top: 5px;\r\n    margin-bottom: 5px;\r\n}\r\n\r\n.text-center {\r\n    text-align: center;\r\n}\r\n\r\n.border-image{\r\n    border: solid 1px #e2e2e2;\r\n    border-radius: 2%\r\n}\r\n\r\n.full-width{\r\n    width: 100%;\r\n}\r\n\r\n.color-font {\r\n    color: #d60045;\r\n}\r\n\r\n\r\n\r\n"
 
 /***/ }),
 
@@ -1315,7 +1315,7 @@ module.exports = ".font-header{\r\n    font-size: 3vw;\r\n    font-family: 'sego
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n  <div class=\"col-2\"></div>\r\n  <div class=\"col-8\">\r\n    <p>\r\n      <span class=\"mr-2 font-header\">my</span>\r\n      <span class=\"mr-2 font-header color-font\">Lips</span>\r\n      <span class=\"mr-2 font-header\">my</span>\r\n      <span class=\"mr-2 font-header color-font\">Life</span>\r\n    </p>\r\n  </div>\r\n  <div class=\"col-2\"></div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-2\"></div>\r\n  <div class=\"col-8 col-sm-8 col-md-8\">\r\n    <div class=\"text-center\">\r\n      <div style=\"display: inline\" *ngFor=\"let item of data\">\r\n        <img class=\"size-image margin-image border-image\" [src]=\"item.color\" alt=\"color\" (click)=\"openProductDetail(item)\">\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"col-2\"></div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-2\"></div>\r\n  <div class=\"col-8\">\r\n    <img class=\"border-image full-width\" src=\"https://res.cloudinary.com/dyiuidzsc/image/upload/v1548991563/Rabu%20Rabu/perfect%20lips/project.jpg\"\r\n      alt=\"\">\r\n  </div>\r\n  <div class=\"col-2\"></div>\r\n</div>"
+module.exports = "<!-- <div>\r\n  <button (click)=\"onCloseTab()\">asdasd</button>\r\n</div> -->\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-1\"></div>\r\n  <div class=\"col-12 col-sm-12 col-md-10\">\r\n    <p>\r\n      <span class=\"mr-2 font-header\">my</span>\r\n      <span class=\"mr-2 font-header color-font\">Lips</span>\r\n      <span class=\"mr-2 font-header\">my</span>\r\n      <span class=\"mr-2 font-header color-font\">Life</span>\r\n    </p>\r\n  </div>\r\n  <div class=\"col-1\"></div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-2\"></div>\r\n  <div class=\"col-12 col-sm-12 col-md-12\">\r\n    <div class=\"text-center\">\r\n      <div style=\"display: inline\" *ngFor=\"let item of data\">\r\n        <img class=\"size-image margin-image border-image\" [src]=\"item.color\" alt=\"color\" (click)=\"openProductDetail(item)\">\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"col-2\"></div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-2\"></div>\r\n  <div class=\"col-8\">\r\n    <img class=\"border-image full-width\" src=\"https://res.cloudinary.com/dyiuidzsc/image/upload/v1548991563/Rabu%20Rabu/perfect%20lips/project.jpg\"\r\n      alt=\"\">\r\n  </div>\r\n  <div class=\"col-2\"></div>\r\n</div>"
 
 /***/ }),
 
@@ -1404,6 +1404,10 @@ var SelectedProductComponent = /** @class */ (function () {
     };
     SelectedProductComponent.prototype.openProductDetail = function (item) {
         this.router.navigate(['product-detail'], { queryParams: { id: item._id } });
+    };
+    SelectedProductComponent.prototype.onCloseTab = function () {
+        console.log('a');
+        open('', '_self').close();
     };
     SelectedProductComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
