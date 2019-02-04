@@ -676,7 +676,7 @@ var SharedComponent = /** @class */ (function () {
         // private basePath: string = '/uploads';
         this.imageArray = [];
         var initParams = {
-            appId: '391466811398230',
+            appId: '2134431583284588',
             version: 'v3.2'
         };
         fb.init(initParams);
