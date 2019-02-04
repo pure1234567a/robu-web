@@ -1121,6 +1121,10 @@ var LoginComponent = /** @class */ (function () {
         this.authService.signIn(angularx_social_login__WEBPACK_IMPORTED_MODULE_3__["FacebookLoginProvider"].PROVIDER_ID);
     };
     LoginComponent.prototype.ngOnInit = function () {
+        this.dataUser = JSON.parse(window.localStorage.getItem('@user'));
+        if (this.dataUser) {
+            this.route.navigate(['select-product']);
+        }
     };
     LoginComponent.prototype.openHome = function () {
         var _this = this;
@@ -1132,31 +1136,20 @@ var LoginComponent = /** @class */ (function () {
             _this.loggedIn = (user != null);
             _this.route.navigate(['select-product']);
         });
-        // this.saveUser();
+        this.saveUser();
     };
     LoginComponent.prototype.saveUser = function () {
         try {
-            var dataUser = JSON.parse(window.localStorage.getItem('@user'));
-            console.log(dataUser);
-            var data = {
-                username: 'admin',
-                password: 'P@ssw'
+            console.log('regis');
+            var dataRegis = {
+                username: this.dataUser.email ? this.dataUser.email : this.dataUser.firstName + this.dataUser.lastName,
+                password: 'P@ssw0rd',
+                firstname: this.dataUser.firstName,
+                lastname: this.dataUser.lastName,
+                email: this.dataUser.email ? this.dataUser.email : this.dataUser.firstName + '@hotmail.com'
             };
-            var user = this.seviceApi.saveUser(data);
-            console.log('login' + user);
-            console.log('login');
-            if (!user) {
-                console.log('regis');
-                var dataRegis = {
-                    username: "boom",
-                    password: 'P@ssw0rd',
-                    firstname: 'boom',
-                    lastname: 'jaidee',
-                    email: 'boom@hotmail.com'
-                };
-                var res = this.seviceApi.sigup(dataRegis);
-                console.log('resiter' + res);
-            }
+            var res = this.seviceApi.sigup(dataRegis);
+            console.log('resiter' + res);
         }
         catch (error) {
             console.log('error ' + error);
