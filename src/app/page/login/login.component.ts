@@ -48,19 +48,24 @@ export class LoginComponent implements OnInit {
       this.route.navigate(['select-product']);
       this.loggedIn = (user != null);
     });
-    
+
   }
   saveUser() {
     try {
       console.log('regis');
-      let dataRegis = {
-        username: this.dataUser.email ? this.dataUser.email : this.dataUser.firstName + this.dataUser.lastName,
-        password: 'P@ssw0rd',
-        firstname: this.dataUser.firstName,
-        lastname: this.dataUser.lastName,
-        email: this.dataUser.email ? this.dataUser.email : this.dataUser.firstName + '@hotmail.com'
+      console.log(this.dataUser.email)
+      var dataRegis: any;
+      if (this.dataUser) {
+        dataRegis = {
+          username: this.dataUser.email ? this.dataUser.email : this.dataUser.firstName + this.dataUser.lastName,
+          password: 'P@ssw0rd',
+          firstname: this.dataUser.firstName,
+          lastname: this.dataUser.lastName,
+          email: this.dataUser.email ? this.dataUser.email : this.dataUser.firstName + '@hotmail.com'
+        }
       }
-      console.log("ดาต้าที่ปั้น",dataRegis)
+
+      console.log("ดาต้าที่ปั้น", dataRegis)
       let res: any = this.seviceApi.sigup(dataRegis)
       console.log('resiter' + res)
     } catch (error) {

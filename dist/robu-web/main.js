@@ -1145,13 +1145,17 @@ var LoginComponent = /** @class */ (function () {
     LoginComponent.prototype.saveUser = function () {
         try {
             console.log('regis');
-            var dataRegis = {
-                username: this.dataUser.email ? this.dataUser.email : this.dataUser.firstName + this.dataUser.lastName,
-                password: 'P@ssw0rd',
-                firstname: this.dataUser.firstName,
-                lastname: this.dataUser.lastName,
-                email: this.dataUser.email ? this.dataUser.email : this.dataUser.firstName + '@hotmail.com'
-            };
+            console.log(this.dataUser.email);
+            var dataRegis;
+            if (this.dataUser) {
+                dataRegis = {
+                    username: this.dataUser.email ? this.dataUser.email : this.dataUser.firstName + this.dataUser.lastName,
+                    password: 'P@ssw0rd',
+                    firstname: this.dataUser.firstName,
+                    lastname: this.dataUser.lastName,
+                    email: this.dataUser.email ? this.dataUser.email : this.dataUser.firstName + '@hotmail.com'
+                };
+            }
             console.log("ดาต้าที่ปั้น", dataRegis);
             var res = this.seviceApi.sigup(dataRegis);
             console.log('resiter' + res);
