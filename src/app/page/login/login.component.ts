@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
       this.loggedIn = (user != null);
       this.route.navigate(['select-product'])
     });
-    this.saveUser();
+    // this.saveUser();
   }
   saveUser() {
     try {
@@ -51,7 +51,7 @@ export class LoginComponent implements OnInit {
       console.log(dataUser);
       let data = {
         username: 'admin',
-        password: '1234'
+        password: 'P@ssw'
       }
       let user: any = this.seviceApi.saveUser(data);
       console.log('login' + user)
