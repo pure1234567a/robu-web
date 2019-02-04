@@ -13,7 +13,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
+  dataUser: any;
   private user: SocialUser;
   private loggedIn: boolean;
 
@@ -31,7 +31,10 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    this.dataUser = JSON.parse(window.localStorage.getItem('@user'));
+    if (this.dataUser) {
+      this.route.navigate(['select-product']);
+    }
   }
 
   openHome() {
@@ -41,33 +44,22 @@ export class LoginComponent implements OnInit {
       this.user.photoUrl = "https://graph.facebook.com/" + this.user.id + "/picture?width=2000&height=2000"
       window.localStorage.setItem('@user', JSON.stringify(this.user));
       this.loggedIn = (user != null);
-      this.route.navigate(['select-product'])
+      this.route.navigate(['select-product']);
     });
-    // this.saveUser();
+    this.saveUser();
   }
   saveUser() {
     try {
-      let dataUser = JSON.parse(window.localStorage.getItem('@user'));
-      console.log(dataUser);
-      let data = {
-        username: 'admin',
-        password: 'P@ssw'
+      console.log('regis');
+      let dataRegis = {
+        username: this.dataUser.email ? this.dataUser.email : this.dataUser.firstName + this.dataUser.lastName,
+        password: 'P@ssw0rd',
+        firstname: this.dataUser.firstName,
+        lastname: this.dataUser.lastName,
+        email: this.dataUser.email ? this.dataUser.email : this.dataUser.firstName + '@hotmail.com'
       }
-      let user: any = this.seviceApi.saveUser(data);
-      console.log('login' + user)
-      console.log('login')
-      if (!user) {
-        console.log('regis');
-        let dataRegis = {
-          username: "boom",
-          password: 'P@ssw0rd',
-          firstname: 'boom',
-          lastname: 'jaidee',
-          email: 'boom@hotmail.com'
-        }
-        let res: any = this.seviceApi.sigup(dataRegis)
-        console.log('resiter' + res)
-      }
+      let res: any = this.seviceApi.sigup(dataRegis)
+      console.log('resiter' + res)
     } catch (error) {
       console.log('error ' + error)
     }
