@@ -708,9 +708,10 @@ var SharedComponent = /** @class */ (function () {
             })
         };
         this.fb.ui(params)
-            .then(function (res) { return close(); })
+            .then(function (res) { return alert('แชร์แล้ว'); })
             .catch(function (e) { return console.error(e); });
-        close();
+        if (window.location.hash == '#close_window')
+            window.close();
     };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
