@@ -62,48 +62,10 @@ export class SharedComponent implements OnInit {
       })
     };
     this.fb.ui(params)
-      .then((res: UIResponse) =>
-      setTimeout(() => {
-        close()
-      }, 2000)
-      )
+      .then((res: UIResponse) => close())
       .catch((e: any) => console.error(e));
-    // }).catch(err => {
-    //   console.log(err)
-    // });
-
-    // const image = await this.pushUpload(this.imageInput);
-    // console.log(image);
-    // const params: UIParams = {
-    //   method: 'share',
-    //   action_type: 'og.likes',
-    //   action_properties: JSON.stringify({
-    //     object: {
-    //       // 'og:url': 'https://angular-for-seo.firebaseapp.com',
-    //       'og:title': 'RabuRabuLoveLove',
-    //       'og:description': 'ข้อความยาว ๆ',
-    //       'og:image': image
-    //     }
-    //   })
-    // };
-    // this.fb.ui(params)
-    //   .then((res: UIResponse) => console.log(res))
-    //   .catch((e: any) => console.error(e));
-
+    
+    close();
   }
-  // pushUpload(base64) {
-  //   this.spinner.show()
-  //   return new Promise((resove, reject) => {
-  //     const storageRef = firebase.storage().ref();
-  //     const fileRandom = Math.floor((Date.now() / 1000) + new Date().getUTCMilliseconds());
-  //     const uploadTask: any = storageRef.child(`images/uploads/${fileRandom}.jpg`);
-  //     uploadTask.putString(base64, firebase.storage.StringFormat.DATA_URL).then((snapshot) => {
-  //       uploadTask.getDownloadURL().then(url => {
-  //         resove(url);
-  //       });
-  //     });
-  //     this.spinner.hide()
-  //   });
-  // }
 
 }

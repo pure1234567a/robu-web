@@ -708,32 +708,9 @@ var SharedComponent = /** @class */ (function () {
             })
         };
         this.fb.ui(params)
-            .then(function (res) {
-            return setTimeout(function () {
-                close();
-            }, 2000);
-        })
+            .then(function (res) { return close(); })
             .catch(function (e) { return console.error(e); });
-        // }).catch(err => {
-        //   console.log(err)
-        // });
-        // const image = await this.pushUpload(this.imageInput);
-        // console.log(image);
-        // const params: UIParams = {
-        //   method: 'share',
-        //   action_type: 'og.likes',
-        //   action_properties: JSON.stringify({
-        //     object: {
-        //       // 'og:url': 'https://angular-for-seo.firebaseapp.com',
-        //       'og:title': 'RabuRabuLoveLove',
-        //       'og:description': 'ข้อความยาว ๆ',
-        //       'og:image': image
-        //     }
-        //   })
-        // };
-        // this.fb.ui(params)
-        //   .then((res: UIResponse) => console.log(res))
-        //   .catch((e: any) => console.error(e));
+        close();
     };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
