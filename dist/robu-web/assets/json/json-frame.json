@@ -29,5 +29,17 @@
         },{
             "_id": "10",
             "image": {"url":"./assets/img/frame.png"}
+        },{
+            "_id": "11",
+            "image": {"url":"./assets/img/frame-flower.png"}
+        },{
+            "_id": "12",
+            "image": {"url":"./assets/img/frame-heart.png"}
+        },{
+            "_id": "13",
+            "image": {"url":"./assets/img/frame-square.png"}
+        },{
+            "_id": "14",
+            "image": {"url":"./assets/img/frame-trans.png"}
         }]
 }
