@@ -62,10 +62,10 @@ export class SharedComponent implements OnInit {
       })
     };
     this.fb.ui(params)
-      .then((res: UIResponse) => alert('แชร์แล้ว'))
+      .then((res: UIResponse) => {if (window.location.hash == '#close_window') window.close();})
       .catch((e: any) => console.error(e));
 
-    if (window.location.hash == '#close_window') window.close();
+    
   }
 
 }
