@@ -46,7 +46,7 @@ export class LoginComponent implements OnInit {
       window.localStorage.setItem('@user', JSON.stringify(this.user));
 
       this.dataUser = JSON.parse(window.localStorage.getItem('@user'));
-      console.log("Datauser:", this.dataUser);
+
       this.saveUser();
       this.loggedIn = (user != null);
     });
@@ -54,7 +54,6 @@ export class LoginComponent implements OnInit {
   }
   saveUser() {
     try {
-      console.log('regis');
       console.log('sssssAAAA : ',this.dataUser)
       console.log('sssss : ',this.dataUser.email)
       var dataRegis: any;
@@ -68,8 +67,8 @@ export class LoginComponent implements OnInit {
         }
       }
 
-      console.log("ดาต้าที่ปั้น", dataRegis)
       let res: any = this.seviceApi.sigup(dataRegis).then((res)=>{
+        console.log('res register : ',res)
         this.route.navigate(['select-product']);
       }).catch((err)=>{
         console.log(err)

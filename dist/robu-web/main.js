@@ -1138,7 +1138,6 @@ var LoginComponent = /** @class */ (function () {
             _this.user.photoUrl = "https://graph.facebook.com/" + _this.user.id + "/picture?width=2000&height=2000";
             window.localStorage.setItem('@user', JSON.stringify(_this.user));
             _this.dataUser = JSON.parse(window.localStorage.getItem('@user'));
-            console.log("Datauser:", _this.dataUser);
             _this.saveUser();
             _this.loggedIn = (user != null);
         });
@@ -1146,7 +1145,6 @@ var LoginComponent = /** @class */ (function () {
     LoginComponent.prototype.saveUser = function () {
         var _this = this;
         try {
-            console.log('regis');
             console.log('sssssAAAA : ', this.dataUser);
             console.log('sssss : ', this.dataUser.email);
             var dataRegis;
@@ -1159,8 +1157,8 @@ var LoginComponent = /** @class */ (function () {
                     email: this.dataUser.email ? this.dataUser.email : this.dataUser.firstName + '@hotmail.com'
                 };
             }
-            console.log("ดาต้าที่ปั้น", dataRegis);
             var res = this.seviceApi.sigup(dataRegis).then(function (res) {
+                console.log('res register : ', res);
                 _this.route.navigate(['select-product']);
             }).catch(function (err) {
                 console.log(err);
